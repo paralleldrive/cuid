@@ -1,25 +1,28 @@
-/*global test, ok, cuid, equal*/
+/*global test, ok, cuid, equal, stop, start*/
 (function () {
   'use strict';
   var collision = false;
 
-  (function () {
-    var ids = {},
-      i,
-      id;
-    for (i = 0; i < 100000; i++) {
-      id = cuid();
-      if (!ids[id]) {
-        ids[id] = id;        
-      } else {
-        collision = true;
-        break;
-      }
-    }
-  }());
-
   test('Collision test', function () {
-    ok(!collision,
-      'ids should not collide');
+    stop();
+    (function () {
+      var ids = {},
+        i,
+        id;
+      for (i = 0; i < 600000; i++) {
+        id = cuid();
+        if (!ids[id]) {
+          ids[id] = id;        
+        } else {
+          collision = true;
+          break;
+        }
+      }
+      ok(!collision,
+        'ids should not collide');
+
+      start();
+    }());
+
   });
 }());

@@ -1,0 +1,34 @@
+{
+  "name": "cuid",
+  "version": "0.1.0",
+  "description": "Client-side unique ids",
+  "author": {
+    "name": "Eric Elliott",
+    "url": "http://ericleads.com"
+  },  
+  "main": "./src/cuid.js",
+  "keywords": [
+    "uid",
+    "unique id",
+    "guid",
+    "uuid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dilvie/cuid.git"
+  },
+  "directories": {
+    "test": "./test",
+    "src": "./src",
+    "dist": "./dist"
+  },
+  "dependencies": {
+    "grunt": "~0.3.x"
+  },
+  "devDependencies": {
+    "tap": "~0.2.4"
+  },
+  "engines": {
+    "node": "~0.8.x"
+  }
+}

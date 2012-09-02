@@ -22,6 +22,9 @@
     "src": "./src",
     "dist": "./dist"
   },
+  "scripts": {
+    "test": "grunt"
+  },
   "dependencies": {
     "grunt": "~0.3.x"
   },

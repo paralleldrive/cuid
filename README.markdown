@@ -1,8 +1,8 @@
 # CUID
 
-Collision-resistant client-side UID generator safe for element IDs and server-side lookups.
+Collision-resistant client-side UID generator safe for element IDs and server-side lookups. [![Build Status](https://secure.travis-ci.org/dilvie/cuid.png)](http://travis-ci.org/dilvie/cuid)
 
-.cuid() returns a short random string prepended with the current time and a little browser/page fingerprint to prevent collisions from different clients.
+.cuid() returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 
 ## Example
 

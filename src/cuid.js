@@ -30,7 +30,7 @@
      *
      * Sample: t6koe7ta5lf4cuzq4apz
      *
-     * Broken down: u - 6koe7ta - 5l-f4 - cuzq - 4apz
+     * Broken down: t - 6koe7ta - 5l-f4 - cuzq - 4apz
      *
      * The first char is a random a-z char to make it HTML
      * ID friendly.

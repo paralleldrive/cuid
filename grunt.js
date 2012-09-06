@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: '<json:package.json>',
     lint: {
-      all: ['./grunt.js', './src/**/*.js', './test/test.js']
+      all: ['./grunt.js', './src/cuid.js', './test/test.js']
     },
     jshint: {
       options: {
@@ -25,10 +25,14 @@ module.exports = function(grunt) {
       }
     },
     concat: {
+      applitude: {
+        src: ['src/applitude.head.js', 'src/cuid.js', 'src/applitude.foot.js'],
+        dest: 'dist/applitude.uid.js'
+      },
       dist: {
         src: ['src/cuid.js'],
         dest: 'dist/cuid.js'
-      }      
+      }
     },
     qunit: {
       index: ['test/index.html']

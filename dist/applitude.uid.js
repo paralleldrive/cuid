@@ -1,3 +1,6 @@
+(function () {
+  'use strict';
+
 /**
  * cuid.js
  * Collision-resistant client-side UID generator safe
@@ -61,4 +64,11 @@
     };
 
   window.cuid = cuid;
+}());
+
+  (function (app) {
+    var namespace = 'uid';
+    app.register(namespace, cuid);
+  }(applitude));
+
 }());

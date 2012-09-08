@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Client-side unique ids",
   "author": {
     "name": "Eric Elliott",
@@ -26,6 +26,7 @@
     "test": "grunt"
   },
   "dependencies": {
+    "applitude": "~0.x.x",
     "grunt": "~0.3.x"
   },
   "devDependencies": {

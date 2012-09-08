@@ -6,18 +6,16 @@ Collision-resistant client-side UID generator safe for element IDs and server-si
 
 ## Example
 
-wz5347t5lh1ttmg
+ch6sgpt5s5lh1ttmg
 
 ### Broken down
 
-** w - z5347t - [5l-h1] - ttmg **
+** c - h6sgpt5s - 5l - h1 - ttmg **
 
-The first char is a random a-z char to make it HTML ID friendly.
+The groups, in order, are:
 
-The next group is a timestamp.
-
-After that is a fingerprint where the first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
-
-The final bit of browser fingerprint is a count of global variables (which varies a lot).
-
-The rest of the ID is just a random number.
+* 'c' - identifies this as a cuid, and allows you to use it in html entity ids.
+* timestamp
+* Browser fingerprint. The first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
+* a count of global variables.
+* Math.random().

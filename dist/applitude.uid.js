@@ -51,9 +51,9 @@
           globalCount.toString(36), 4),
 
         // Grab some more chars from browser's .random() method
-        random = ("0000" + (Math.random() *
+        random = pad((Math.random() *
             Math.pow(36, 4) << 0)
-            .toString(36)).substr(-4);
+            .toString(36), 4);
 
         c = (c < 1679615) ? c : 0;
         counter = pad(c.toString(36), 4);

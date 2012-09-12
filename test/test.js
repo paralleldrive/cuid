@@ -22,14 +22,7 @@
         'ids should not collide');
 
       start();
+
     }());
-
-  test('Applitude build', function () {
-    equal(typeof applitude.uid(), 'string',
-      'applitude.uid() is registered and returns a string.');
-    ok(applitude.uid() !== applitude.uid(), 
-      '.uid() should generate unique strings.');
-  });
-
   });
 }());

@@ -10,9 +10,12 @@
  */
 
 /*global window, navigator, document */
-(function () {
+var global = global || this, module = module || undefined;
+
+(function (app) {
   'use strict';
-  var c = 0,
+  var namespace = 'cuid',
+    c = 0,
     globalCount = (function () {
       var i,
         count = 0;
@@ -27,7 +30,7 @@
       return s.substr(s.length-size);
     },
 
-    cuid = function cuid() {
+    api = function cuid() {
       // Starting with a lowercase letter Makes
       // it HTML element ID friendly.
       var letter = 'c', // fixed = allows for sequential access
@@ -60,5 +63,12 @@
       return  (letter + timestamp + counter + fingerprint + random);
     };
 
-  window.cuid = cuid;
-}());
+  // don't change anything from here down.
+  if (app.register) {
+    app.register(namespace, api);
+  } else {
+    namespace = app.exports ? 'exports' : namespace;
+    app[namespace] = api;
+  }
+
+}(global.applitude || module || this));

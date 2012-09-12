@@ -25,14 +25,6 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      applitudeCopy: {
-        src: ['node_modules/applitude/dist/applitude.bundle.js'],
-        dest: 'lib/applitude.bundle.js'
-      },
-      applitudeBuild: {
-        src: ['src/applitude.head.js', 'src/cuid.js', 'src/applitude.foot.js'],
-        dest: 'dist/applitude.uid.js'
-      },
       dist: {
         src: ['src/cuid.js'],
         dest: 'dist/cuid.js'

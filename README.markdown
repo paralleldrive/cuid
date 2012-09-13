@@ -6,16 +6,24 @@ Collision-resistant client-side UID generator safe for element IDs and server-si
 
 ## Example
 
-ch6sgpt5s5lh1ttmg
+ch72gsb320000udocl363
 
 ### Broken down
 
-** c - h6sgpt5s - 5l - h1 - ttmg **
+
+** c - h72gsb32 - 0000 - udoc - l363 **
 
 The groups, in order, are:
 
-* 'c' - identifies this as a cuid, and allows you to use it in html entity ids.
+* 'c' - identifies this as a cuid, and allows you to use it in html entity ids. The fixed value helps keep the ids sequential.
 * timestamp
-* Browser fingerprint. The first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
-* a count of global variables.
-* Math.random().
+* counter - a single process might generate the same random string. The weaker the pseudo-random source, the higher the probability. That problem gets worse as processors get faster. The counter will roll over if the value gets too big.
+* Client fingerprint
+* Math.random()
+
+
+## Fingerprints
+
+In browsers, the first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
+
+In node, the first two chars are extracted from the process.pid. The next two chars are extracted from the hostname.

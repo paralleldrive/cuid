@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: '<json:package.json>',
     lint: {
-      all: ['./grunt.js', './src/cuid.js', './test/test.js']
+      all: ['./grunt.js', './dist/*.js', './test/test.js']
     },
     jshint: {
       options: {
@@ -25,9 +25,13 @@ module.exports = function(grunt) {
       }
     },
     concat: {
-      dist: {
-        src: ['src/cuid.js'],
-        dest: 'dist/cuid.js'
+      browser: {
+        src: ['src/head.js', 'src/browser-fingerprint.js', 'src/footer.js'],
+        dest: 'dist/browser-cuid.js'
+      },
+      node: {
+        src: ['src/head.js', 'src/node-fingerprint.js', 'src/footer.js'],
+        dest: 'dist/node-cuid.js'
       }
     },
     qunit: {
@@ -38,5 +42,5 @@ module.exports = function(grunt) {
       tasks: ['lint', 'concat,', 'qunit']
     }
   });
-  grunt.registerTask('default', 'lint concat qunit');
+  grunt.registerTask('default', 'concat lint qunit');
 };

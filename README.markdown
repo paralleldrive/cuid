@@ -24,6 +24,7 @@ The groups, in order, are:
 
 ## Fingerprints
 
-In browsers, the first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
+**In browsers**, the first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
+That string is concatenated with a count of variables in the global scope (which is also fairly unique), and the result is trimmed to 4 chars.
 
-In node, the first two chars are extracted from the process.pid. The next two chars are extracted from the hostname.
+**In node**, the first two chars are extracted from the process.pid. The next two chars are extracted from the hostname.

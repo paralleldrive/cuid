@@ -37,10 +37,9 @@ module.exports = function(grunt) {
     qunit: {
       index: ['test/index.html']
     },
-    watch: {
-      files: ['<config:lint.all>'],
-      tasks: ['lint', 'concat,', 'qunit']
+    test: {
+      "node-cuid": ['test/node-cuid-test.js']
     }
   });
-  grunt.registerTask('default', 'concat lint qunit');
+  grunt.registerTask('default', 'concat lint qunit test');
 };

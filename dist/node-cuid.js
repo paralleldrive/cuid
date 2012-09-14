@@ -40,7 +40,7 @@ var global = global || this, module = module || undefined;
         counter,
 
         // A few chars to generate distinct ids for different
-        // browser / page combos (so different computers are far less
+        // clients (so different computers are far less
         // likely to generate the same id)
         fingerprint = api.fingerprint(),
 

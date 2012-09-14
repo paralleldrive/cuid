@@ -26,6 +26,12 @@ var global = global || this, module = module || undefined;
       return s.substr(s.length-size);
     },
 
+    randomBlock = function randomBlock() {
+      return pad((Math.random() *
+            discreteValues << 0)
+            .toString(base), blockSize);
+    },
+
     api = function cuid() {
       // Starting with a lowercase letter makes
       // it HTML element ID friendly.
@@ -45,9 +51,7 @@ var global = global || this, module = module || undefined;
         fingerprint = api.fingerprint(),
 
         // Grab some more chars from Math.random()
-        random = pad((Math.random() *
-            discreteValues << 0)
-            .toString(base), blockSize);
+        random = randomBlock() + randomBlock();
 
         c = (c < discreteValues) ? c : 0;
         counter = pad(c.toString(base), blockSize);

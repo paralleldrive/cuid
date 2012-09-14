@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Collission-resistant ids optimized for horizontal scaling and sequential lookup performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",
@@ -26,6 +26,7 @@
     "test": "grunt"
   },
   "dependencies": {
+    "applitude": "~0.x.x",
     "grunt": "~0.3.x"
   },
   "engines": {

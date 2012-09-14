@@ -49,9 +49,9 @@ Purely random IDs, even very large ones like the uuid v4 specification lack suff
 Because entities might need to be generated in high-performance loops, id generation should be fast. That means no waiting around for asynchronous entropy pool requests, or cross-process/cross-network communication. It would be hard to use pseudo-random generators that rely on filling an entropy pool before it can generate another string. Performance slows to impracticality in the browser. All sources of entropy need to be fast enough for synchronous access.
 
 
-#### Sequential
+#### Sequential IDs
 
-[Sequential ids can enhance performance](http://stackoverflow.com/questions/170346/what-are-the-performance-improvement-of-sequential-guid-over-standard-guid) for database transactions for a variety of reasons.
+[Sequential ids can enhance performance](http://stackoverflow.com/questions/170346/what-are-the-performance-improvement-of-sequential-guid-over-standard-guid) for database transactions for a variety of reasons. Ids should be suitable for use as high-performance database primary keys. Pure pseudo-random variants don't meet this requirement.
 
 
 #### Security

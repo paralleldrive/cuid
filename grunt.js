@@ -47,4 +47,5 @@ module.exports = function(grunt) {
     }
   });
   grunt.registerTask('default', 'concat lint qunit test');
+  grunt.registerTask('install', 'concat');
 };

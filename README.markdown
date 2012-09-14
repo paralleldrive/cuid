@@ -49,6 +49,13 @@ Purely random IDs, even very large ones like the uuid v4 specification lack suff
 Because entities might need to be generated in high-performance loops, id generation should be fast. That means no waiting around for asynchronous entropy pool requests, or cross-process/cross-network communication. It would be hard to use pseudo-random generators that rely on filling an entropy pool before it can generate another string. Performance slows to impracticality in the browser. All sources of entropy need to be fast enough for synchronous access.
 
 
+#### Tiny
+
+Somewhat related to performance, an algorithm to generate an ID should require a tiny implementation.
+
+Weighing in at less than 100 lines of code, cuid should be suitable for even the lightest-weight mobile clients, and will not have a significant impact on the download time of your app, particularly if you follow best practices and concatenate it with the rest of your code in order to avoid the latency hit of an extra file request.
+
+
 #### Sequential IDs
 
 [Sequential ids can enhance performance](http://stackoverflow.com/questions/170346/what-are-the-performance-improvement-of-sequential-guid-over-standard-guid) for database transactions for a variety of reasons. Ids should be suitable for use as high-performance database primary keys. Pure pseudo-random variants don't meet this requirement.
@@ -56,12 +63,32 @@ Because entities might need to be generated in high-performance loops, id genera
 
 #### Security
 
-All client-visible ids need to have sufficient random data that it becomes practically impossible to try to guess IDs. Since cuids have multiple moving parts (time, counter, and several characters of pseudo-random data), trying to guess an id based on a previous ID would be a challenge.
+Client-visible ids often need to have sufficient random data that it becomes practically impossible to try to guess valid IDs based on an existing, known id.
+
+Since cuids have multiple moving parts (time, counter, and several characters of pseudo-random data), trying to guess an id based on a previous ID would be a challenge.
+
+The random portion of a cuid has 2,821,109,907,456 possible values. Even if an attacker manages to capture a client's fingerprint, the chances of guessing a valid random value with the the right ms value and the right counter increment are very low.
+
+That said, cuids are **not** designed to be used as encryption keys, and should not be considered suitable for cryptographic security.
 
 
 #### Portability
 
-Stronger forms of the UUID / GUID algorithms require access to OS services that are not available in browsers, meaning that they are impossible to implement in the browser.
+Most stronger forms of the UUID / GUID algorithms require access to OS services that are not available in browsers, meaning that they are impossible to implement as specified.
 
 
+## Questions
 
+### Why don't you use sha1?
+
+Sha1 is very cool, but but an implementation in JavaScript is about 300 lines by itself, uncompressed, and its use would provide little benefit. For contrast, the cuid source code weighs in at less than 100 lines of code, uncompressed.
+
+
+### Why are there no dashes?
+
+Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names (including JavaScript). Removing dashes between groups allows the ids to be more portable.
+
+
+## Comments
+
+We hope that other people will start to adopt the use of cuid to build more robust applications. If you spot anything wrong with our thinking, or our code, or if you just have questions, please open an issue on Github.

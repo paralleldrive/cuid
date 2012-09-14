@@ -1,7 +1,7 @@
 {
   "name": "cuid",
   "version": "1.1.4",
-  "description": "Collission-resistant ids optimized for horizontal scaling and sequential lookup performance. For node and browsers.",
+  "description": "Collission-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",
     "url": "http://ericleads.com"

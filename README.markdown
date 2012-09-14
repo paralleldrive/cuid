@@ -65,7 +65,7 @@ Weighing in at less than 100 lines of code, cuid should be suitable for even the
 [Sequential ids can enhance performance](http://stackoverflow.com/questions/170346/what-are-the-performance-improvement-of-sequential-guid-over-standard-guid) for database transactions for a variety of reasons. Ids should be suitable for use as high-performance database primary keys. Pure pseudo-random variants don't meet this requirement.
 
 
-#### Security
+### Security
 
 Client-visible ids often need to have sufficient random data that it becomes practically impossible to try to guess valid IDs based on an existing, known id.
 
@@ -76,7 +76,7 @@ The random portion of a cuid has 2,821,109,907,456 possible values. Even if an a
 That said, cuids are **not** designed to be used as encryption keys, and should not be considered suitable for cryptographic security.
 
 
-#### Portability
+### Portability
 
 Most stronger forms of the UUID / GUID algorithms require access to OS services that are not available in browsers, meaning that they are impossible to implement as specified.
 

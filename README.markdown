@@ -6,6 +6,8 @@ For node and browsers.
 
 .cuid() returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 
+## Comments / Questions / Bug Reports [Open an Issue](https://github.com/dilvie/cuid/issues/new)
+
 ## Example
 
 ch72gsb320000udocl363eofy

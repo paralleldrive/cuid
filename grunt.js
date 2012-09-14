@@ -25,6 +25,10 @@ module.exports = function(grunt) {
       }
     },
     concat: {
+      applitude: {
+        src: ['node_modules/applitude/dist/applitude.bundle.js'],
+        dest: 'lib/applitude.bundle.js'
+      },
       browser: {
         src: ['src/head.js', 'src/browser-fingerprint.js', 'src/footer.js'],
         dest: 'dist/browser-cuid.js'
@@ -35,7 +39,8 @@ module.exports = function(grunt) {
       }
     },
     qunit: {
-      index: ['test/index.html']
+      applitude: ['test/applitude-cuid-test.html'],
+      browser: ['test/browser-cuid-test.html']
     },
     test: {
       "node-cuid": ['test/node-cuid-test.js']

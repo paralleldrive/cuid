@@ -95,3 +95,4 @@ Almost all web-technology identifiers allow numbers and letters (though some req
 ## Credits
 
 [Eric Elliott](http://ericleads.com/), Author of ["Programming JavaScript Applications" (O'Reilly)](http://shop.oreilly.com/product/0636920024231.do)
+Thanks to [Tout.com](http://tout.com/)

@@ -92,3 +92,6 @@ Sha1 is very cool, but but an implementation in JavaScript is about 300 lines by
 
 Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names (including JavaScript). Removing dashes between groups allows the ids to be more portable.
 
+## Credits
+
+[Eric Elliott](http://ericleads.com/), Author of ["Programming JavaScript Applications" (O'Reilly)](http://shop.oreilly.com/product/0636920024231.do)

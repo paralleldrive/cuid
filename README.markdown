@@ -134,3 +134,10 @@ The cuid specification should not be considered an API contract. Code that relie
 
 
 ### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)
+
+
+### Credit
+
+Created by Eric Elliott, Author, ["Programming JavaScript Applications (O'Reilly)"](http://shop.oreilly.com/product/0636920024231.do)
+
+Thanks to [Tout](http://tout.com/) for support and production testing.

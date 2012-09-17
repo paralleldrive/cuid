@@ -122,6 +122,4 @@ Sha1 is very cool, but but an implementation in JavaScript is about 300 lines by
 Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names (including JavaScript). Removing dashes between groups allows the ids to be more portable.
 
 
-## Comments
-
-We hope that other people will start to adopt the use of cuid to build more robust applications. If you spot anything wrong with our thinking, or our code, or if you just have questions, please open an issue on Github.
+### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)

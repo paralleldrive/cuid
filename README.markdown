@@ -112,14 +112,25 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 # Questions
 
-### Why don't you use sha1?
+### Is this a replacement for GUID / UUID?
 
-Sha1 is very cool, but but an implementation in JavaScript is about 300 lines by itself, uncompressed, and its use would provide little benefit. For contrast, the cuid source code weighs in at less than 100 lines of code, uncompressed.
+No. Cuid is great for the use case it was designed for -- to generate ids for applications which need to be scaleable past tens or hundreds of new entities per second across multiple id-generating hosts. In other words, if you're building a web or mobile app and want the assurance that your choice of id standards isn't going to slow you down, cuid is for you.
+
+However, if you need to obscure the order of id generation, or if it's potentially problematic to know the precise time that an id was generated, you'll want to go with something different.
+
+Cuids should not be considered cryptographically secure (but neither should most guid algorithms. Make sure yours is using a crypto library before you rely on it).
+
+
+### Why don't you use sha1, md5, etc?
+
+A sha1 implementation in JavaScript is about 300 lines by itself, uncompressed, and its use would provide little benefit. For contrast, the cuid source code weighs in at less than 100 lines of code, uncompressed. It also comes at considerable performance cost. Md5 has similar issues.
 
 
 ### Why are there no dashes?
 
-Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names (including JavaScript). Removing dashes between groups allows the ids to be more portable.
+Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names. Removing dashes between groups allows the ids to be more portable. Also, identifier groupings should not be relied on in your application. Removing them should discourage application developers from trying to extract data from a cuid.
+
+The cuid specification should not be consired an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.
 
 
 ### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)

@@ -130,7 +130,7 @@ A sha1 implementation in JavaScript is about 300 lines by itself, uncompressed, 
 
 Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names. Removing dashes between groups allows the ids to be more portable. Also, identifier groupings should not be relied on in your application. Removing them should discourage application developers from trying to extract data from a cuid.
 
-The cuid specification should not be consired an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.
+The cuid specification should not be considered an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.
 
 
 ### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)

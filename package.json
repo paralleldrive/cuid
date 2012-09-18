@@ -1,12 +1,12 @@
 {
   "name": "cuid",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Collission-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",
     "url": "http://ericleads.com"
   },  
-  "main": "./src/cuid.js",
+  "main": "./dist/node-cuid.js",
   "keywords": [
     "uid",
     "unique id",

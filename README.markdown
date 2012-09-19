@@ -2,7 +2,7 @@
 
 Collission-resistant ids optimized for horizontal scaling and sequential lookup performance.
 
-For node and browsers.
+For node and browsers. (Please port to other languages and platforms).
 
 cuid() returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 

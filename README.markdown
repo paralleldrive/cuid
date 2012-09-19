@@ -96,7 +96,7 @@ Because cuids can be safely generated synchronously, you can generate a lot of t
 
 Because cuids are sequential, database primary key performance gets a significant boost.
 
-Weighing in at around 1k compressed, the cuid source should be suitable for even the lightest-weight mobile clients, and will not have a significant impact on the download time of your app, particularly if you follow best practices and concatenate it with the rest of your code in order to avoid the latency hit of an extra file request.
+Weighing in at less than 1k minified and compressed, the cuid source should be suitable for even the lightest-weight mobile clients, and will not have a significant impact on the download time of your app, particularly if you follow best practices and concatenate it with the rest of your code in order to avoid the latency hit of an extra file request.
 
 ## Secure
 

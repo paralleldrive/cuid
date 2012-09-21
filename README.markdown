@@ -21,7 +21,7 @@ The groups, in order, are:
 * Timestamp
 * Counter - a single process might generate the same random string. The weaker the pseudo-random source, the higher the probability. That problem gets worse as processors get faster. The counter will roll over if the value gets too big.
 * Client fingerprint
-* Math.random()
+* Pseudo random (`Math.random()` in JavaScript)
 
 ## Fingerprints
 

@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Collission-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",
@@ -18,9 +18,10 @@
     "url": "https://github.com/dilvie/cuid.git"
   },
   "directories": {
-    "test": "./test",
+    "dist": "./dist",
+    "lib": "./lib",
     "src": "./src",
-    "dist": "./dist"
+    "test": "./test"
   },
   "scripts": {
     "postinstall": "grunt install",

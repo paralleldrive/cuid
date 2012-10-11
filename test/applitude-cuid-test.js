@@ -3,14 +3,15 @@
   'use strict';
   var collision = false;
 
-  test('Collision test', function () {
+  test('cuid()', function () {
     stop();
     (function () {
       var ids = window.ids = {},
+        cuid = applitude.cuid,
         i,
         id;
       for (i = 0; i < 600000; i++) {
-        id = applitude.cuid();
+        id = cuid();
         if (!ids[id]) {
           ids[id] = id;        
         } else {
@@ -18,8 +19,12 @@
           break;
         }
       }
+
+      ok(typeof cuid() === 'string',
+        '.cuid() should return a string');
+
       ok(!collision,
-        'ids should not collide');
+        '.cuid() should generate unique ids on a single machine');
 
       start();
 

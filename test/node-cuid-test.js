@@ -16,6 +16,10 @@ exports.testcuid = function (test) {
         break;
       }
     }
+
+    test.ok(typeof cuid() === 'string',
+      '.cuid() should return a string');
+
     test.ok(!collision,
       'ids should not collide');
 

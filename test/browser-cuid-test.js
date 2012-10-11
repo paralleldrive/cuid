@@ -3,7 +3,7 @@
   'use strict';
   var collision = false;
 
-  test('Collision test', function () {
+  test('cuid()', function () {
     stop();
     (function () {
       var ids = window.ids = {},
@@ -18,8 +18,12 @@
           break;
         }
       }
+
+      ok(typeof cuid() === 'string',
+        '.cuid() should return a string');
+
       ok(!collision,
-        'ids should not collide');
+        '.cuid() should generate unique ids on a single machine');
 
       start();
 

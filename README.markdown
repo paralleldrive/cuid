@@ -109,8 +109,9 @@ The only part of a cuid that might be hard to replicate between different client
 
 The algorithm is also easy to reproduce in other languages. You are encouraged to port it to whatever language you see fit.
 
-### Other Ports:
+### Ports:
 
+* JavaScript (Browsers, Browsers + [Applitude](https://github.com/dilvie/applitude), Node)
 * [CUID for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
 
 

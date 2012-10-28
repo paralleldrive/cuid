@@ -23,13 +23,13 @@
     "src": "./src",
     "test": "./test"
   },
-  "scripts": {
-    "postinstall": "grunt install",
-    "test": "grunt"
-  },
   "dependencies": {
     "applitude": "~0.x.x",
     "grunt": "~0.3.x"
+  },
+  "scripts": {
+    "postinstall": "grunt install",
+    "test": "grunt"
   },
   "engines": {
     "node": "~0.x.x"

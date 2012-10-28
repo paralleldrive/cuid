@@ -2,7 +2,7 @@
 
 Collission-resistant ids optimized for horizontal scaling and sequential lookup performance.
 
-For node and browsers. (Please port to other languages and platforms).
+For node and browsers.
 
 cuid() returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 
@@ -108,6 +108,10 @@ Cuids contain enough random data and moving parts as to make guessing another id
 The only part of a cuid that might be hard to replicate between different clients is the fingerprint. It's easy to override the fingerprint method in order to port to different clients. Cuid already works standalone in browsers, as a node module, or with applitude, so you can use cuid where you need to use it.
 
 The algorithm is also easy to reproduce in other languages. You are encouraged to port it to whatever language you see fit.
+
+### Other Ports:
+
+* [CUID for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
 
 
 # Questions

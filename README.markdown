@@ -10,8 +10,8 @@ cuid() returns a short random string with some collision-busting measures. Safe 
 
 ch72gsb320000udocl363eofy
 
-### Broken down
 
+### Broken down
 
 ** c - h72gsb32 - 0000 - udoc - l363eofy **
 

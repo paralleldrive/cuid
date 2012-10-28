@@ -1,4 +1,4 @@
-# CUID [![Build Status](https://secure.travis-ci.org/dilvie/cuid.png)](http://travis-ci.org/dilvie/cuid)
+# CUID
 
 Collission-resistant ids optimized for horizontal scaling and sequential lookup performance.
 

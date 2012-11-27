@@ -46,6 +46,7 @@ module.exports = function(grunt) {
       "node-cuid": ['test/node-cuid-test.js']
     }
   });
-  grunt.registerTask('default', 'concat lint qunit test');
+  grunt.registerTask('testall', 'qunit test');
+  grunt.registerTask('default', 'concat lint');
   grunt.registerTask('install', 'concat');
 };

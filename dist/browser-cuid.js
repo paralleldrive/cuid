@@ -10,9 +10,7 @@
  * MIT License
  */
 
-/*global window, navigator, document, require, process*/
-var global = global || this, module = module || undefined;
-
+/*global window, navigator, document, require, process, module */
 (function (app) {
   'use strict';
   var namespace = 'cuid',
@@ -88,9 +86,10 @@ var global = global || this, module = module || undefined;
   // don't change anything from here down.
   if (app.register) {
     app.register(namespace, api);
+  } else if (typeof module !== 'undefined') {
+    module.exports = api;
   } else {
-    namespace = app.exports ? 'exports' : namespace;
     app[namespace] = api;
   }
 
-}(global.applitude || module || this));
+}(this.applitude || this));

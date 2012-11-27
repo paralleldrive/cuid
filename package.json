@@ -1,12 +1,13 @@
 {
   "name": "cuid",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Collission-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",
     "url": "http://ericleads.com"
   },  
   "main": "./dist/node-cuid.js",
+  "browserify": "./dist/browser-cuid.js",
   "keywords": [
     "uid",
     "unique id",
@@ -23,13 +24,12 @@
     "src": "./src",
     "test": "./test"
   },
-  "dependencies": {
+  "devDependencies": {
     "applitude": "~0.x.x",
     "grunt": "~0.3.x"
   },
   "scripts": {
-    "postinstall": "grunt install",
-    "test": "grunt"
+    "test": "grunt testall"
   },
   "engines": {
     "node": "~0.x.x"

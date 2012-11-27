@@ -10,9 +10,7 @@
  * MIT License
  */
 
-/*global window, navigator, document, require, process*/
-var global = global || this, module = module || undefined;
-
+/*global window, navigator, document, require, process, module */
 (function (app) {
   'use strict';
   var namespace = 'cuid',

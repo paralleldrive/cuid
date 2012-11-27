@@ -2,9 +2,10 @@
   // don't change anything from here down.
   if (app.register) {
     app.register(namespace, api);
+  } else if (typeof module !== 'undefined') {
+    module.exports = api;
   } else {
-    namespace = app.exports ? 'exports' : namespace;
     app[namespace] = api;
   }
 
-}(global.applitude || module || this));
+}(this.applitude || this));

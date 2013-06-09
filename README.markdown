@@ -1,6 +1,6 @@
 # CUID
 
-Collission-resistant ids optimized for horizontal scaling and sequential lookup performance.
+Collision-resistant ids optimized for horizontal scaling and sequential lookup performance.
 
 Currently available for Node, browsers, and Ruby (see ports below -- more ports are welcome).
 

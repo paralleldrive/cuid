@@ -31,19 +31,22 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>CUID</h1>
+        <h1>
+<a name="cuid" class="anchor" href="#cuid"><span class="octicon octicon-link"></span></a>CUID</h1>
 
-<p>Collission-resistant ids optimized for horizontal scaling and sequential lookup performance.</p>
+<p>Collision-resistant ids optimized for horizontal scaling and sequential lookup performance.</p>
 
 <p>Currently available for Node, browsers, and Ruby (see ports below -- more ports are welcome).</p>
 
 <p><code>cuid()</code> returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.</p>
 
-<h2>Example</h2>
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
 
 <p>ch72gsb320000udocl363eofy</p>
 
-<h3>Broken down</h3>
+<h3>
+<a name="broken-down" class="anchor" href="#broken-down"><span class="octicon octicon-link"></span></a>Broken down</h3>
 
 <p>** c - h72gsb32 - 0000 - udoc - l363eofy **</p>
 
@@ -55,18 +58,21 @@
 <li>Counter - a single process might generate the same random string. The weaker the pseudo-random source, the higher the probability. That problem gets worse as processors get faster. The counter will roll over if the value gets too big.</li>
 <li>Client fingerprint</li>
 <li>Pseudo random (<code>Math.random()</code> in JavaScript)</li>
-</ul><h2>Fingerprints</h2>
+</ul><h2>
+<a name="fingerprints" class="anchor" href="#fingerprints"><span class="octicon octicon-link"></span></a>Fingerprints</h2>
 
 <p><strong>In browsers</strong>, the first chars are obtained from the user agent string (which is fairly unique), and the supported mimeTypes (which is also fairly unique, except for IE, which always returns 0).
 That string is concatenated with a count of variables in the global scope (which is also fairly unique), and the result is trimmed to 4 chars.</p>
 
 <p><strong>In node</strong>, the first two chars are extracted from the process.pid. The next two chars are extracted from the hostname.</p>
 
-<h2>Motivation</h2>
+<h2>
+<a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h2>
 
 <p>Modern web applications have different requirements than applications from just a few years ago. Our modern unique identifiers have a stricter list of requirements that cannot all be satisfied by any existing version of the GUID/UUID specifications:</p>
 
-<h3>Horizontal scalability</h3>
+<h3>
+<a name="horizontal-scalability" class="anchor" href="#horizontal-scalability"><span class="octicon octicon-link"></span></a>Horizontal scalability</h3>
 
 <p>Today's applications don't run on any single machine.</p>
 
@@ -80,7 +86,8 @@ That string is concatenated with a count of variables in the global scope (which
 
 <p>Alternatively, you've played it safe and you only let your database create ids. Writes only happen on a master database, and load is spread out over read replicas. But with this kind of strain, you have to start scaling your database writes horizontally, too, and suddenly your application starts to crawl (if the db is smart enough to guarantee unique ids between write hosts), or you start getting id collisions between different db hosts, so your write hosts don't agree about which ids represent which data.</p>
 
-<h3>Performance</h3>
+<h3>
+<a name="performance" class="anchor" href="#performance"><span class="octicon octicon-link"></span></a>Performance</h3>
 
 <p>Because entities might need to be generated in high-performance loops, id generation should be fast. That means no waiting around for asynchronous entropy pool requests, or cross-process/cross-network communication. Performance slows to impracticality in the browser. All sources of entropy need to be fast enough for synchronous access.</p>
 
@@ -90,31 +97,38 @@ That string is concatenated with a count of variables in the global scope (which
 
 <p>If client side ID generation were stronger, the chances of collision would be much smaller, and the client could send complete records to the db for insertion without waiting for a full round-trip request to finish before using the ID.</p>
 
-<h4>Sequential IDs</h4>
+<h4>
+<a name="sequential-ids" class="anchor" href="#sequential-ids"><span class="octicon octicon-link"></span></a>Sequential IDs</h4>
 
 <p><a href="http://stackoverflow.com/questions/170346/what-are-the-performance-improvement-of-sequential-guid-over-standard-guid">Sequential ids can enhance performance</a> for database transactions for a variety of reasons. Ids should be suitable for use as high-performance database primary keys. Pure pseudo-random variants don't meet this requirement.</p>
 
-<h4>Tiny</h4>
+<h4>
+<a name="tiny" class="anchor" href="#tiny"><span class="octicon octicon-link"></span></a>Tiny</h4>
 
 <p>Somewhat related to performance, an algorithm to generate an ID should require a tiny implementation. This is especially important for thick-client JavaScript applications.</p>
 
-<h3>Security</h3>
+<h3>
+<a name="security" class="anchor" href="#security"><span class="octicon octicon-link"></span></a>Security</h3>
 
 <p>Client-visible ids often need to have sufficient random data that it becomes practically impossible to try to guess valid IDs based on an existing, known id. That makes simple sequential ids unusable in the context of client-side generated database keys.</p>
 
-<h4>Portability</h4>
+<h4>
+<a name="portability" class="anchor" href="#portability"><span class="octicon octicon-link"></span></a>Portability</h4>
 
 <p>Most stronger forms of the UUID / GUID algorithms require access to OS services that are not available in browsers, meaning that they are impossible to implement as specified.</p>
 
-<h1>Features of cuids</h1>
+<h1>
+<a name="features-of-cuids" class="anchor" href="#features-of-cuids"><span class="octicon octicon-link"></span></a>Features of cuids</h1>
 
-<h2>Scaleable</h2>
+<h2>
+<a name="scaleable" class="anchor" href="#scaleable"><span class="octicon octicon-link"></span></a>Scaleable</h2>
 
 <p>Because of the timestamp and the counter, cuid is really good at generating unique IDs on one machine.</p>
 
 <p>Because of the fingerprints, cuid is also good at preventing collisions between multiple clients.</p>
 
-<h2>Fast</h2>
+<h2>
+<a name="fast" class="anchor" href="#fast"><span class="octicon octicon-link"></span></a>Fast</h2>
 
 <p>Because cuids can be safely generated synchronously, you can generate a lot of them quickly. Since it's unlikely that you'll get a collision, you don't have to wait for a round trip to the database just to insert a complete record in your database.</p>
 
@@ -122,26 +136,31 @@ That string is concatenated with a count of variables in the global scope (which
 
 <p>Weighing in at less than 1k minified and compressed, the cuid source should be suitable for even the lightest-weight mobile clients, and will not have a significant impact on the download time of your app, particularly if you follow best practices and concatenate it with the rest of your code in order to avoid the latency hit of an extra file request.</p>
 
-<h2>Secure</h2>
+<h2>
+<a name="secure" class="anchor" href="#secure"><span class="octicon octicon-link"></span></a>Secure</h2>
 
 <p>Cuids contain enough random data and moving parts as to make guessing another id based on an existing id practically impossible. It also opens up a way to detect for abuse attempts -- if a client requests large blocks of ids that don't exist, there's a good chance that the client is malicious, or trying to get at data that doesn't belong to it.</p>
 
-<h2>Portable</h2>
+<h2>
+<a name="portable" class="anchor" href="#portable"><span class="octicon octicon-link"></span></a>Portable</h2>
 
 <p>The only part of a cuid that might be hard to replicate between different clients is the fingerprint. It's easy to override the fingerprint method in order to port to different clients. Cuid already works standalone in browsers, as a node module, or with applitude, so you can use cuid where you need to use it.</p>
 
 <p>The algorithm is also easy to reproduce in other languages. You are encouraged to port it to whatever language you see fit.</p>
 
-<h3>Ports:</h3>
+<h3>
+<a name="ports" class="anchor" href="#ports"><span class="octicon octicon-link"></span></a>Ports:</h3>
 
 <ul>
 <li>JavaScript (Browsers, Browsers + <a href="https://github.com/dilvie/applitude">Applitude</a>, Node)</li>
 <li>
 <a href="https://github.com/iyshannon/cuid">CUID for Ruby</a> - <a href="https://github.com/iyshannon">Ian Shannon</a>
 </li>
-</ul><h1>Questions</h1>
+</ul><h1>
+<a name="questions" class="anchor" href="#questions"><span class="octicon octicon-link"></span></a>Questions</h1>
 
-<h3>Is this a replacement for GUID / UUID?</h3>
+<h3>
+<a name="is-this-a-replacement-for-guid--uuid" class="anchor" href="#is-this-a-replacement-for-guid--uuid"><span class="octicon octicon-link"></span></a>Is this a replacement for GUID / UUID?</h3>
 
 <p>No. Cuid is great for the use case it was designed for -- to generate ids for applications which need to be scaleable past tens or hundreds of new entities per second across multiple id-generating hosts. In other words, if you're building a web or mobile app and want the assurance that your choice of id standards isn't going to slow you down, cuid is for you.</p>
 
@@ -149,21 +168,26 @@ That string is concatenated with a count of variables in the global scope (which
 
 <p>Cuids should not be considered cryptographically secure (but neither should most guid algorithms. Make sure yours is using a crypto library before you rely on it).</p>
 
-<h3>Why don't you use sha1, md5, etc?</h3>
+<h3>
+<a name="why-dont-you-use-sha1-md5-etc" class="anchor" href="#why-dont-you-use-sha1-md5-etc"><span class="octicon octicon-link"></span></a>Why don't you use sha1, md5, etc?</h3>
 
 <p>A sha1 implementation in JavaScript is about 300 lines by itself, uncompressed, and its use would provide little benefit. For contrast, the cuid source code weighs in at less than 100 lines of code, uncompressed. It also comes at considerable performance cost. Md5 has similar issues.</p>
 
-<h3>Why are there no dashes?</h3>
+<h3>
+<a name="why-are-there-no-dashes" class="anchor" href="#why-are-there-no-dashes"><span class="octicon octicon-link"></span></a>Why are there no dashes?</h3>
 
 <p>Almost all web-technology identifiers allow numbers and letters (though some require you to begin with a letter -- hence the 'c' at the beginning of a cuid). However, dashes are not allowed in some identifier names. Removing dashes between groups allows the ids to be more portable. Also, identifier groupings should not be relied on in your application. Removing them should discourage application developers from trying to extract data from a cuid.</p>
 
 <p>The cuid specification should not be considered an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.</p>
 
-<h3><a href="https://github.com/dilvie/cuid/issues/new?title=Question">Submit a Question or Comment</a></h3>
+<h3>
+<a name="submit-a-question-or-comment" class="anchor" href="#submit-a-question-or-comment"><span class="octicon octicon-link"></span></a><a href="https://github.com/dilvie/cuid/issues/new?title=Question">Submit a Question or Comment</a>
+</h3>
 
-<h3>Credit</h3>
+<h3>
+<a name="credit" class="anchor" href="#credit"><span class="octicon octicon-link"></span></a>Credit</h3>
 
-<p>Created by Eric Elliott, Author, <a href="http://shop.oreilly.com/product/0636920024231.do">"Programming JavaScript Applications (O'Reilly)"</a></p>
+<p>Created by Eric Elliott, Author, <a href="http://www.tkqlhce.com/click-7037282-11260198?url=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F0636920024231.do%3Fcmp%3Daf-code-book-product_cj_9781449338220_%7BPID%7D&amp;cjsku=0636920024231">"Programming JavaScript Applications (O'Reilly)"</a></p>
 
 <p>Thanks to <a href="http://tout.com/">Tout</a> for support and production testing.</p>
       </section>

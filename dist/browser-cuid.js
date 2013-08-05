@@ -59,6 +59,18 @@
       return  (letter + timestamp + counter + fingerprint + random);
     };
 
+  api.slug = function slug() {
+    var date = new Date().getTime().toString(36),
+      counter = c.toString(36).slice(-1),
+      print = api.fingerprint().slice(0,1) +
+        api.fingerprint().slice(-1),
+      random = randomBlock().slice(-1);
+
+    c++;
+
+    return date.slice(2,4) + date.slice(-2) + 
+      counter + print + random;
+  };
 
   api.globalCount = function globalCount() {
     // We want to cache the results of this

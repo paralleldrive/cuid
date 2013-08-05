@@ -115,6 +115,19 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [CUID for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
 
 
+# Short URLs
+
+Need a smaller ID? `cuid.slug()` is for you. Weighing in at only 8 characters, `.slug()` is a great solution for short urls.
+
+Just be aware:
+
+* They're less likely to be sequential. Stick to full cuids for database lookups, if possible.
+
+* They have less random data, less room for the counter, and less room for the fingerprint, which means that all of them are more likely to collide or be guessed, especially as CPU speeds increase.
+
+Don't use them if guessing an existing ID would expose confidential information to malicious users. For example, if you're providing a service like Google Drive or DropBox, which hosts user's private files, I would prefer `cuid()` over `.slug()` for private collaboration URLs, for security reasons.
+
+
 # Questions
 
 ### Is this a replacement for GUID / UUID?

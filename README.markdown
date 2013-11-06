@@ -8,8 +8,14 @@ Currently available for Node, browsers, and Ruby (see ports below -- more ports 
 
 ## Example
 
-ch72gsb320000udocl363eofy
+Node style. For the browser stand-alone version, just leave off the require line.
 
+```js
+var cuid = require('cuid');
+console.log( cuid() );
+
+// ch72gsb320000udocl363eofy
+```
 
 ### Broken down
 

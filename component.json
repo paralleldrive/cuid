@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "repo": "dilvie/cuid",
+  "repo": "matthiasg/cuid",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance",
   "version": "1.2.1",
   "keywords": [

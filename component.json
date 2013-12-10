@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "repo": "matthiasg/cuid",
+  "repo": "dilvie/cuid",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance",
   "version": "1.2.1",
   "keywords": [
@@ -12,7 +12,7 @@
   "dependencies": {},
   "development": {},
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/browser-cuid.js",
   "scripts": [
     "dist/browser-cuid.js"
   ]

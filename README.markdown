@@ -119,7 +119,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 * JavaScript (Browsers, Browsers + [Applitude](https://github.com/dilvie/applitude), Node)
 * [CUID for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
-* [CUID for .Net](github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
+* [CUID for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
 
 
 # Short URLs

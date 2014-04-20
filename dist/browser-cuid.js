@@ -30,6 +30,12 @@
             .toString(base), blockSize);
     },
 
+    safeCounter = function () {
+      c = (c < discreteValues) ? c : 0;
+      c++; // this is not subliminal
+      return c - 1;
+    },
+
     api = function cuid() {
       // Starting with a lowercase letter makes
       // it HTML element ID friendly.
@@ -51,22 +57,19 @@
         // Grab some more chars from Math.random()
         random = randomBlock() + randomBlock();
 
-        c = (c < discreteValues) ? c : 0;
-        counter = pad(c.toString(base), blockSize);
-
-      c++; // this is not subliminal
+        counter = pad(safeCounter().toString(base), blockSize);
 
       return  (letter + timestamp + counter + fingerprint + random);
     };
 
   api.slug = function slug() {
     var date = new Date().getTime().toString(36),
-      counter = c.toString(36).slice(-1),
+      counter,
       print = api.fingerprint().slice(0,1) +
         api.fingerprint().slice(-1),
       random = randomBlock().slice(-1);
 
-    c++;
+      counter = safeCounter().toString(36).slice(-1);
 
     return date.slice(2,4) + date.slice(-2) + 
       counter + print + random;

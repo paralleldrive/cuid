@@ -8,13 +8,19 @@ Currently available for Node, browsers, and Ruby (see ports below -- more ports 
 
 ## Example
 
-Node style. For the browser stand-alone version, just leave off the require line.
+Node style. For the browser stand-alone version, just leave off the require line or use component.io.
 
 ```js
 var cuid = require('cuid');
 console.log( cuid() );
 
 // ch72gsb320000udocl363eofy
+```
+
+Install with [component(1)](http://component.io):
+
+```    
+$ component install dilvie/cuid
 ```
 
 ### Broken down

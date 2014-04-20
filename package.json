@@ -30,7 +30,7 @@
     "grunt": "~0.3.x"
   },
   "scripts": {
-    "test": "grunt testall"
+    "test": "grunt test"
   },
   "engines": {
     "node": "~0.x.x"

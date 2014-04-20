@@ -1,29 +1,36 @@
-/*global require console exports */
 var cuid = require('../dist/node-cuid.js');
 
-exports.testcuid = function (test) {
-  var collision = false;
-  (function () {
-    var ids = test.ids = {},
-      i,
-      id;
-    for (i = 0; i < 600000; i++) {
-      id = cuid();
-      if (!ids[id]) {
-        ids[id] = id;        
-      } else {
-        collision = true;
-        break;
-      }
+var MAX = 1200000;
+var collisionTest = function collisionTest(fn) {
+  var i = 0,
+    id,
+    ids = {},
+    pass = true;
+  while (i < MAX) {
+    id = fn();
+    if (!ids[id]) {
+      ids[id] = id;
+    } else {
+      pass = false;
+      console.log('Failed at ' + i + ' iterations.');
+      break;
     }
+    i++;
+  }
+  return pass;
+};
 
-    test.ok(typeof cuid() === 'string',
-      '.cuid() should return a string');
+exports.testcuid = function (test) {
+ 
+  test.ok(typeof cuid() === 'string',
+    '.cuid() should return a string.');
 
-    test.ok(!collision,
-      'ids should not collide');
+  test.ok(collisionTest(cuid),
+    'ids should not collide.');
 
-    test.done();
+  test.ok(collisionTest(cuid.slug),
+    'slugs should not collide.');
 
-  }());
+  test.done();
+
 };

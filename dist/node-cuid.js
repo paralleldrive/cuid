@@ -67,11 +67,11 @@
       counter,
       print = api.fingerprint().slice(0,1) +
         api.fingerprint().slice(-1),
-      random = randomBlock().slice(-1);
+      random = randomBlock().slice(-2);
 
-      counter = safeCounter().toString(36).slice(-1);
+      counter = safeCounter().toString(36).slice(-4);
 
-    return date.slice(2,4) + date.slice(-2) + 
+    return date.slice(-2) + 
       counter + print + random;
   };
 

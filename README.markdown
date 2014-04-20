@@ -17,11 +17,18 @@ console.log( cuid() );
 // ch72gsb320000udocl363eofy
 ```
 
+## Installing
+
+```
+$ npm install --save cuid
+```
+
 Install with [component(1)](http://component.io):
 
 ```    
 $ component install dilvie/cuid
 ```
+
 
 ### Broken down
 

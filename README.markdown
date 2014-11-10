@@ -138,7 +138,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 # Short URLs
 
-Need a smaller ID? `cuid.slug()` is for you. Weighing in at only 8 characters, `.slug()` is a great solution for short urls.
+Need a smaller ID? `cuid.slug()` is for you. Weighing in at only 7 characters, `.slug()` is a great solution for short urls.
 
 Just be aware:
 

@@ -131,9 +131,10 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 ### Ports:
 
 * JavaScript (Browsers, Browsers + [Applitude](https://github.com/dilvie/applitude), Node)
-* [CUID for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
-* [CUID for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
-* [CUID for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
+* [cuid for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
+* [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
+* [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
+* [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
 
 
 # Short URLs

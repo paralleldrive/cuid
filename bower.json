@@ -1,0 +1,25 @@
+{
+  "name": "cuid",
+  "version": "1.2.4",
+  "homepage": "https://github.com/dilvie/cuid.git",
+  "authors": [
+    "Eric Elliott <eric@ericleads.com>"
+  ],
+  "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
+  "main": "./dist/browser-cuid.js",
+  "keywords": [
+    "uid",
+    "unique",
+    "id",
+    "guid",
+    "uuid"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

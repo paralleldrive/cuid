@@ -2,7 +2,7 @@
 
 Collision-resistant ids optimized for horizontal scaling and sequential lookup performance.
 
-Currently available for Node, browsers, Ruby and .Net (see ports below -- more ports are welcome).
+Currently available for Node, browsers, Ruby, .Net, Go, and PHP (see ports below -- more ports are welcome).
 
 `cuid()` returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 

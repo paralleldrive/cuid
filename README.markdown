@@ -2,7 +2,7 @@
 
 Collision-resistant ids optimized for horizontal scaling and sequential lookup performance.
 
-Currently available for Node, browsers, Ruby, .Net, Go, and PHP (see ports below -- more ports are welcome).
+Currently available for Node, browsers, Ruby, .Net, Go, PHP and Elixir (see ports below -- more ports are welcome).
 
 `cuid()` returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 
@@ -135,6 +135,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
 * [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
+* [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
 
 
 # Short URLs

@@ -31,8 +31,5 @@
   },
   "scripts": {
     "test": "grunt test"
-  },
-  "engines": {
-    "node": "~0.x.x"
   }
 }

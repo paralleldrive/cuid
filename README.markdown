@@ -136,6 +136,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
 * [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
 * [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
+* [cuid for Haskell](https://github.com/eightyeight/hscuid) - [Daniel Buckmaster](https://github.com/eightyeight)
 
 
 # Short URLs

@@ -19,6 +19,7 @@
     "type": "git",
     "url": "https://github.com/dilvie/cuid.git"
   },
+  "license": "MIT",
   "directories": {
     "dist": "./dist",
     "lib": "./lib",

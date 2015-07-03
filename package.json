@@ -33,10 +33,15 @@
     "blue-tape": "^0.1.9",
     "eslint": "^0.24.0",
     "node-libs-browser": "^0.5.2",
+    "rimraf": "^2.4.1",
     "webpack": "^1.10.1"
   },
   "scripts": {
+    "build": "NODE_ENV=production webpack && npm run build:min",
+    "build:min": "NODE_ENV=production MINIFY=1 webpack",
+    "clean": "rimraf build",
     "lint": "eslint source/**/*.js",
+    "prebuild": "npm run clean",
     "test": "npm run test:server",
     "test:client": "babel-node test/client",
     "test:server": "babel-node test/server",

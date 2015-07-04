@@ -28,9 +28,13 @@
   },
   "devDependencies": {
     "applitude": "~0.x.x",
+    "babel-eslint": "^3.1.20",
+    "eslint": "^0.24.0",
     "grunt": "~0.3.x"
   },
   "scripts": {
-    "test": "grunt test"
+    "lint": "eslint source/*.js",
+    "test": "npm run validate",
+    "validate": "npm run lint"
   }
 }

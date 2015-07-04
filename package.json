@@ -38,7 +38,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack && npm run build:min",
-    "build:min": "NODE_ENV=production MINIFY=1 webpack",
+    "build:min": "NODE_ENV=production webpack -p",
     "clean": "rimraf build",
     "lint": "eslint source/**/*.js",
     "prebuild": "npm run clean",

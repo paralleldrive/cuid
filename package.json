@@ -27,7 +27,6 @@
     "test": "./test"
   },
   "devDependencies": {
-    "applitude": "~0.x.x",
     "babel-eslint": "^3.1.20",
     "eslint": "^0.24.0",
   },

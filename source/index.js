@@ -12,7 +12,7 @@
 
 'use strict';
 
-const c = 0;
+let c = 0;
 const blockSize = 4;
 const base = 36;
 const discreteValues = Math.pow(base, blockSize);

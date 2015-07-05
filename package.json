@@ -27,12 +27,20 @@
     "test": "./test"
   },
   "devDependencies": {
+    "babel": "^5.6.14",
     "babel-eslint": "^3.1.20",
-    "eslint": "^0.24.0",
+    "blue-tape": "^0.1.9",
+    "eslint": "^0.24.0"
   },
   "scripts": {
-    "lint": "eslint source/*.js",
-    "test": "npm run validate",
-    "validate": "npm run lint"
+    "lint": "eslint source/**/*.js",
+    "test": "npm run test:server",
+    "test:client": "babel-node test/client",
+    "test:server": "babel-node test/server",
+    "validate": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "browser-fingerprint": "0.0.1",
+    "node-fingerprint": "0.0.2"
   }
 }

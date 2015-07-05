@@ -3,9 +3,9 @@
 import { cuid, slug } from '../../source/server/index.js';
 import test from 'blue-tape';
 
-let MAX = 1200000;
+const MAX = 1200000;
 
-let collisionTest = (fn) => {
+const collisionTest = (fn) => {
   let i = 0;
   let ids = {};
   let pass = true;

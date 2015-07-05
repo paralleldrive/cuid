@@ -7,8 +7,8 @@
     "email": "eric@ericleads.com",
     "url": "http://ericleads.com"
   },
-  "main": "./dist/node-cuid.js",
-  "browserify": "./dist/browser-cuid.js",
+  "main": "./build/server/cuid.js",
+  "browserify": "./build/client/cuid.js",
   "keywords": [
     "uid",
     "unique id",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dilvie/cuid.git"
+    "url": "https://github.com/ericelliott/cuid.git"
   },
   "license": "MIT",
   "directories": {

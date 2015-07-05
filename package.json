@@ -32,8 +32,10 @@
     "babel-loader": "^5.3.0",
     "blue-tape": "^0.1.9",
     "eslint": "^0.24.0",
+    "faucet": "0.0.1",
     "node-libs-browser": "^0.5.2",
     "rimraf": "^2.4.1",
+    "saucelabs": "^0.1.1",
     "webpack": "^1.10.1"
   },
   "scripts": {
@@ -43,9 +45,10 @@
     "lint": "eslint source/**/*.js",
     "prebuild": "npm run clean",
     "test": "npm run test:server",
-    "test:client": "babel-node test/client",
+    "test:client": "source bin/env.sh && babel-node test/client",
     "test:server": "babel-node test/server",
-    "validate": "npm run lint && npm run test"
+    "validate": "npm run lint && npm run test",
+    "validate-dev": "npm run lint && npm run build && npm run test | faucet"
   },
   "dependencies": {
     "browser-fingerprint": "0.0.1",

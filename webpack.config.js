@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./source/index.js",
+  entry: "./source/client/index.js",
   output: {
     path: 'build/client',
     filename: "cuid.js"

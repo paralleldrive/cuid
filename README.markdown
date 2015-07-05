@@ -1,7 +1,5 @@
-# CUID [![Travis-CI](https://travis-ci.org/ericelliott/cuid.svg)](https://travis-ci.org/ericelliott/cuid)
-
-
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/learn-javascript-courses/javascript-questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# CUID
+[![Travis-CI](https://travis-ci.org/ericelliott/cuid.svg)](https://travis-ci.org/ericelliott/cuid)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/learn-javascript-courses/javascript-questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Collision-resistant ids optimized for horizontal scaling and sequential lookup performance.
 

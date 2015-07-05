@@ -7,8 +7,8 @@
     "email": "eric@ericleads.com",
     "url": "http://ericleads.com"
   },
-  "main": "./dist/node-cuid.js",
-  "browserify": "./dist/browser-cuid.js",
+  "main": "./build/server/cuid.js",
+  "browserify": "./build/client/cuid.js",
   "keywords": [
     "uid",
     "unique id",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dilvie/cuid.git"
+    "url": "https://github.com/ericelliott/cuid.git"
   },
   "license": "MIT",
   "directories": {
@@ -27,10 +27,20 @@
     "test": "./test"
   },
   "devDependencies": {
-    "applitude": "~0.x.x",
-    "grunt": "~0.3.x"
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.20",
+    "blue-tape": "^0.1.9",
+    "eslint": "^0.24.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "lint": "eslint source/**/*.js",
+    "test": "npm run test:server",
+    "test:client": "babel-node test/client",
+    "test:server": "babel-node test/server",
+    "validate": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "browser-fingerprint": "0.0.1",
+    "node-fingerprint": "0.0.2"
   }
 }

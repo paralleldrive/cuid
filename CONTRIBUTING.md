@@ -3,7 +3,7 @@
 ## Saucelabs setup
 
 To run unit tests on Saucelabs, first create a Saucelabs account (if you don't
-already have one) [here]().
+already have one) [here](https://saucelabs.com/opensource).
 
 Copy the `bin/env.sh.example` to `bin/env.sh`
 

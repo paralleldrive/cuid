@@ -125,13 +125,13 @@ Cuids contain enough random data and moving parts as to make guessing another id
 
 ## Portable
 
-The only part of a cuid that might be hard to replicate between different clients is the fingerprint. It's easy to override the fingerprint method in order to port to different clients. Cuid already works standalone in browsers, as a node module, or with applitude, so you can use cuid where you need to use it.
+The only part of a cuid that might be hard to replicate between different clients is the fingerprint. It's easy to override the fingerprint method in order to port to different clients. Cuid already works standalone in browsers, or as a node module, so you can use cuid where you need to use it.
 
 The algorithm is also easy to reproduce in other languages. You are encouraged to port it to whatever language you see fit.
 
 ### Ports:
 
-* JavaScript (Browsers, Browsers + [Applitude](https://github.com/dilvie/applitude), Node)
+* JavaScript (Browsers & Node)
 * [cuid for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
 * [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)

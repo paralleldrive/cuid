@@ -6,8 +6,8 @@
     "name": "Eric Elliott",
     "url": "https://ericelliottjs.com"
   },
-  "main": "./build/server/cuid.js",
-  "browser": "./build/client/cuid.js",
+  "main": "./build/server-cuid.js",
+  "browser": "./build/client-cuid.js",
   "keywords": [
     "id",
     "guid",

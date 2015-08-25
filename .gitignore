@@ -1,4 +1,4 @@
 node_modules
-build
 bin/env.sh
 npm-debug.log
+test-cuid.js

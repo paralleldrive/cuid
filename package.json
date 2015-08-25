@@ -50,7 +50,8 @@
     "test:server": "babel-node test/server",
     "prevalidate": "npm run clean",
     "validate": "npm run lint && npm run build && npm run test",
-    "validate-dev": "npm run lint && npm run build && npm run test | faucet"
+    "validate-dev": "npm run lint && npm run build && npm run test | faucet",
+    "prepublish": "npm run validate"
   },
   "dependencies": {
     "browser-fingerprint": "0.0.1",

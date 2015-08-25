@@ -46,7 +46,7 @@
     "comment:build:test": "NODE_ENV=production WEBPACK_TARGET=test webpack -p",
     "lint": "eslint source test",
     "test": "npm run test:server && npm run test:client",
-    "test:client": "zuul -- test/client/test-cuid",
+    "test:client": "#zuul -- test/client/test-cuid",
     "test:server": "babel-node test/server",
     "prevalidate": "npm run clean",
     "validate": "npm run lint && npm run build && npm run test",

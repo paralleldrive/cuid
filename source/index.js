@@ -10,8 +10,6 @@
  * MIT License
  */
 
-'use strict';
-
 let c = 0;
 const blockSize = 4;
 const base = 36;
@@ -24,7 +22,7 @@ const randomBlock = function randomBlock () {
 };
 
 const safeCounter = function () {
-  c = (c < discreteValues) ? c : 0;
+  c = c < discreteValues ? c : 0;
   return c++;
 };
 

@@ -1,8 +1,20 @@
-module.exports = {
-  entry: "./source/client/index.js",
-  output: {
-    path: 'build/client',
-    filename: "cuid.js"
+var target = process.env.WEBPACK_TARGET;
+
+var config = {
+  entry: {},
+  output: target === 'client' ? {
+    library: 'cuid',
+    libraryTarget: 'umd',
+    path: 'build/',
+    filename: target + '-cuid.js'
+  } : target === 'test' ? {
+    library: 'testCuid',
+    libraryTarget: 'umd',
+    path: 'test/client/',
+    filename: target + '-cuid.js'
+  } : {
+    path: 'build/',
+    filename: target + '-cuid.js'
   },
   module: {
     loaders: [
@@ -13,4 +25,10 @@ module.exports = {
       }
     ]
   }
-}
+};
+
+config.entry = target === 'test' ?
+  './test/client/index.js' :
+  './source/' + target + '/index.js';
+
+module.exports = config;

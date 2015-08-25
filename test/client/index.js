@@ -1,7 +1,9 @@
-import cuid from '../../source/server/index.js';
+import corejs from 'core-js';
 import test from 'tape';
-const { slug } = cuid;
+import cuid from '../../source/client';
 
+const { slug } = cuid;
+const after = test;
 const MAX = 1200000;
 
 const collisionTest = (fn) => {
@@ -26,15 +28,19 @@ const collisionTest = (fn) => {
   return pass;
 };
 
-test('cuid()', (t) => {
-  t.plan(3);
-
-  t.ok(typeof cuid() === 'string',
+test('cuid()', assert => {
+  assert.ok(typeof cuid() === 'string',
     '.cuid() should return a string.');
 
-  t.ok(collisionTest(cuid),
+  assert.ok(collisionTest(cuid),
     'cuids should not collide.');
 
-  t.ok(collisionTest(slug),
+  assert.ok(collisionTest(slug),
     'slugs should not collide.');
+
+  assert.end();
+});
+
+after('complete', (assert) => {
+  assert.end();
 });

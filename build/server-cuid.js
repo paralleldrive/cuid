@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define(factory);
+	else if(typeof exports === 'object')
+		exports["cuid"] = factory();
+	else
+		root["cuid"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -44,7 +54,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
@@ -52,11 +62,16 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _indexJs = __webpack_require__(1);
+	var _indexJs = __webpack_require__(2);
 
 	var _indexJs2 = _interopRequireDefault(_indexJs);
 
-	var fingerprint = __webpack_require__(2)();
+	// workaround for webpack's process polyfill
+	try {
+	  process.pid = process.pid || Date.now();
+	} catch (e) {}
+
+	var fingerprint = __webpack_require__(3)(process.pid);
 
 	var _createCuid = (0, _indexJs2['default'])(fingerprint);
 
@@ -67,117 +82,10 @@
 
 	exports['default'] = cuid;
 	module.exports = exports['default'];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	/**
-	 * cuid.js
-	 * Collision-resistant UID generator for browsers and node.
-	 * Sequential for fast db lookups and recency sorting.
-	 * Safe for element IDs and server-side lookups.
-	 *
-	 * Extracted from CLCTR
-	 *
-	 * Copyright (c) Eric Elliott 2012
-	 * MIT License
-	 */
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	var c = 0;
-	var blockSize = 4;
-	var base = 36;
-	var discreteValues = Math.pow(base, blockSize);
-
-	var pad = function pad(str, size) {
-	  return ('000000000' + str).slice(-size);
-	};
-
-	var randomBlock = function randomBlock() {
-	  return pad((Math.random() * discreteValues << 0).toString(base), blockSize);
-	};
-
-	var safeCounter = function safeCounter() {
-	  c = c < discreteValues ? c : 0;
-	  return c++;
-	};
-
-	var createCuid = function createCuid(fingerprint) {
-	  var cuid = function cuid() {
-	    // Starting with a lowercase letter makes
-	    // it HTML element ID friendly.
-	    var letter = 'c'; // hard-coded allows for sequential access
-
-	    // timestamp
-	    // warning: this exposes the exact date and time
-	    // that the uid was created.
-	    var timestamp = new Date().getTime().toString(base);
-
-	    // Grab some more chars from Math.random()
-	    var random = randomBlock() + randomBlock();
-
-	    // Prevent same-machine collisions.
-	    var counter = pad(safeCounter().toString(base), blockSize);
-
-	    return letter + timestamp + counter + fingerprint + random;
-	  };
-
-	  var slug = function slug() {
-	    var date = new Date().getTime().toString(36);
-	    var print = fingerprint.slice(0, 1) + fingerprint.slice(-1);
-	    var random = randomBlock().slice(-2);
-	    var counter = safeCounter().toString(36).slice(-4);
-
-	    return date.slice(-2) + counter + print + random;
-	  };
-
-	  return { cuid: cuid, slug: slug };
-	};
-
-	exports['default'] = createCuid;
-	module.exports = exports['default'];
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	var os = __webpack_require__(4);
-
-	var pad = function pad(str, size) {
-	  return ('000000000' + str).slice(-size);
-	};
-
-	var padding = 2;
-	var pid = pad(process.pid.toString(36), padding);
-	var hostname = os.hostname();
-
-	hostname = hostname.split('').reduce(function (prev, char) {
-	  return +prev + char.charCodeAt(0);
-	}, +hostname.length + 36).toString(36);
-
-	var hostId = pad(hostname, padding);
-
-	exports['default'] = function () {
-	  return pid + hostId;
-	};
-
-	module.exports = exports['default'];
-
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 3 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -273,6 +181,110 @@
 
 
 /***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	/**
+	 * cuid.js
+	 * Collision-resistant UID generator for browsers and node.
+	 * Sequential for fast db lookups and recency sorting.
+	 * Safe for element IDs and server-side lookups.
+	 *
+	 * Extracted from CLCTR
+	 *
+	 * Copyright (c) Eric Elliott 2012
+	 * MIT License
+	 */
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var c = 0;
+	var blockSize = 4;
+	var base = 36;
+	var discreteValues = Math.pow(base, blockSize);
+
+	var pad = function pad(str, size) {
+	  return ('000000000' + str).slice(-size);
+	};
+
+	var randomBlock = function randomBlock() {
+	  return pad((Math.random() * discreteValues << 0).toString(base), blockSize);
+	};
+
+	var safeCounter = function safeCounter() {
+	  c = c < discreteValues ? c : 0;
+	  return c++;
+	};
+
+	var createCuid = function createCuid(fingerprint) {
+	  var cuid = function cuid() {
+	    // Starting with a lowercase letter makes
+	    // it HTML element ID friendly.
+	    var letter = 'c'; // hard-coded allows for sequential access
+
+	    // timestamp
+	    // warning: this exposes the exact date and time
+	    // that the uid was created.
+	    var timestamp = new Date().getTime().toString(base);
+
+	    // Grab some more chars from Math.random()
+	    var random = randomBlock() + randomBlock();
+
+	    // Prevent same-machine collisions.
+	    var counter = pad(safeCounter().toString(base), blockSize);
+
+	    return letter + timestamp + counter + fingerprint + random;
+	  };
+
+	  var slug = function slug() {
+	    var date = new Date().getTime().toString(36);
+	    var print = fingerprint.slice(0, 1) + fingerprint.slice(-1);
+	    var random = randomBlock().slice(-2);
+	    var counter = safeCounter().toString(36).slice(-4);
+
+	    return date.slice(-2) + counter + print + random;
+	  };
+
+	  return { cuid: cuid, slug: slug };
+	};
+
+	exports['default'] = createCuid;
+	module.exports = exports['default'];
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var os = __webpack_require__(4);
+
+	var pad = function pad(str, size) {
+	  return (new Array(size + 1).join('0') + str).slice(-size);
+	};
+
+	var padding = 2;
+	var pid = pad(process.pid.toString(36), padding);
+	var hostname = os.hostname().split('').reduce(function (prev, char) {
+	  return +prev + char.charCodeAt(0);
+	}, +os.hostname().length + 36).toString(36);
+
+	var hostId = pad(hostname, padding);
+
+	exports['default'] = function () {
+	  return pid + hostId;
+	};
+
+	module.exports = exports['default'];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
 /* 4 */
 /***/ function(module, exports) {
 
@@ -324,4 +336,6 @@
 
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;

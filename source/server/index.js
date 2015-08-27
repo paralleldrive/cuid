@@ -1,5 +1,11 @@
 import createCuid from '../index.js';
-const fingerprint = require('node-fingerprint')();
+
+// workaround for webpack's process polyfill
+try {
+  process.pid = process.pid || Date.now()
+} catch (e) {}
+
+const fingerprint = require('node-fingerprint')(process.pid);
 
 const { cuid, slug } = createCuid(fingerprint);
 cuid.slug = slug;

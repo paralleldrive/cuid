@@ -48,7 +48,7 @@
     "lint": "eslint source test",
     "test": "npm run test:server && npm run test:client",
     "test:client": "#zuul -- test/client/test-cuid",
-    "test:server": "babel-node test/server",
+    "test:server": "npm run build:server && babel-node test/server | faucet",
     "prevalidate": "npm run clean",
     "validate": "npm run lint && npm run build && npm run test",
     "validate-dev": "npm run lint && npm run build && npm run test | faucet",
@@ -57,6 +57,6 @@
   "dependencies": {
     "browser-fingerprint": "0.0.1",
     "core-js": "^1.1.1",
-    "node-fingerprint": "0.0.2"
+    "node-fingerprint": "^1.0.0"
   }
 }

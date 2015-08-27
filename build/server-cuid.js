@@ -67,11 +67,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _indexJs2 = _interopRequireDefault(_indexJs);
 
 	// workaround for webpack's process polyfill
-	try {
-	  process.pid = process.pid || Date.now();
-	} catch (e) {} // eslint-disable-line no-empty
+	var pid = process && process.pid || Date.now();
 
-	var fingerprint = __webpack_require__(3)(process.pid);
+	var fingerprint = __webpack_require__(3)(pid);
 
 	var _createCuid = (0, _indexJs2['default'])(fingerprint);
 
@@ -258,31 +256,31 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
 	var os = __webpack_require__(4);
 
+	var padding = 2;
 	var pad = function pad(str, size) {
 	  return (new Array(size + 1).join('0') + str).slice(-size);
 	};
 
-	var padding = 2;
-	var pid = pad(process.pid.toString(36), padding);
 	var hostname = os.hostname().split('').reduce(function (prev, char) {
 	  return +prev + char.charCodeAt(0);
 	}, +os.hostname().length + 36).toString(36);
 
 	var hostId = pad(hostname, padding);
 
-	exports['default'] = function () {
-	  return pid + hostId;
+	exports['default'] = function (pid) {
+	  return pad(pid.toString(36), padding) + hostId;
 	};
 
 	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+
 
 /***/ },
 /* 4 */

@@ -13,6 +13,8 @@ var config = {
     path: 'test/client/',
     filename: target + '-cuid.js'
   } : {
+    library: 'cuid',
+    libraryTarget: 'umd',
     path: 'build/',
     filename: target + '-cuid.js'
   },

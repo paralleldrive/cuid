@@ -25,6 +25,7 @@
     "babel-eslint": "^4.0.10",
     "babel-loader": "5.3.0",
     "babelify": "^6.2.0",
+    "browserify": "^11.0.1",
     "ecstatic": "^0.8.0",
     "eslint": "0.24.0",
     "faucet": "0.0.1",
@@ -48,7 +49,7 @@
     "lint": "eslint source test",
     "test": "npm run test:server && npm run test:client",
     "test:client": "#zuul -- test/client/test-cuid",
-    "test:server": "babel-node test/server",
+    "test:server": "npm run build:server && babel-node test/server | faucet",
     "prevalidate": "npm run clean",
     "validate": "npm run lint && npm run build && npm run test",
     "validate-dev": "npm run lint && npm run build && npm run test | faucet",
@@ -57,6 +58,6 @@
   "dependencies": {
     "browser-fingerprint": "0.0.1",
     "core-js": "^1.1.1",
-    "node-fingerprint": "0.0.2"
+    "node-fingerprint": "^1.0.0"
   }
 }

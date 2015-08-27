@@ -1,4 +1,4 @@
-import cuid from '../../source/server/index.js';
+import cuid from '../../build/server-cuid.js';
 import test from 'tape';
 const { slug } = cuid;
 

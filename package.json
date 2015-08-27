@@ -25,6 +25,7 @@
     "babel-eslint": "^4.0.10",
     "babel-loader": "5.3.0",
     "babelify": "^6.2.0",
+    "browserify": "^11.0.1",
     "ecstatic": "^0.8.0",
     "eslint": "0.24.0",
     "faucet": "0.0.1",

@@ -69,7 +69,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// workaround for webpack's process polyfill
 	try {
 	  process.pid = process.pid || Date.now();
-	} catch (e) {}
+	} catch (e) {} // eslint-disable-line no-empty
 
 	var fingerprint = __webpack_require__(3)(process.pid);
 

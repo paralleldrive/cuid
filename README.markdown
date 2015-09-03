@@ -103,7 +103,7 @@ Most stronger forms of the UUID / GUID algorithms require access to OS services 
 
 # Features of cuids
 
-## Scaleable
+## Scalable
 
 Because of the timestamp and the counter, cuid is really good at generating unique IDs on one machine.
 
@@ -158,7 +158,7 @@ Don't use them if guessing an existing ID would expose confidential information 
 
 ### Is this a replacement for GUID / UUID?
 
-No. Cuid is great for the use case it was designed for -- to generate ids for applications which need to be scaleable past tens or hundreds of new entities per second across multiple id-generating hosts. In other words, if you're building a web or mobile app and want the assurance that your choice of id standards isn't going to slow you down, cuid is for you.
+No. Cuid is great for the use case it was designed for -- to generate ids for applications which need to be scalable past tens or hundreds of new entities per second across multiple id-generating hosts. In other words, if you're building a web or mobile app and want the assurance that your choice of id standards isn't going to slow you down, cuid is for you.
 
 However, if you need to obscure the order of id generation, or if it's potentially problematic to know the precise time that an id was generated, you'll want to go with something different.
 

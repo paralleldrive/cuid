@@ -9,7 +9,7 @@ Currently available for Node, browsers, Ruby, .Net, Go, PHP and Elixir (see port
 
 ## Example
 
-Node style. For the browser stand-alone version, just leave off the require line or use component.io.
+Node style. For the browser, either bundle with something like [browserify](https://github.com/substack/node-browserify) or [webpack](http://webpack.github.io/), or use the stand-alone version and leave off the require line.
 
 ```js
 var cuid = require('cuid');
@@ -24,11 +24,7 @@ console.log( cuid() );
 $ npm install --save cuid
 ```
 
-Install with [component(1)](http://component.io):
-
-```    
-$ component install dilvie/cuid
-```
+or download the stand-alone version from [`./dist`](https://github.com/ericelliott/cuid/tree/master/dist).
 
 
 ### Broken down

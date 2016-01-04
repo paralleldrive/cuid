@@ -135,6 +135,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
 * [cuid for Haskell](https://github.com/eightyeight/hscuid) - [Daniel Buckmaster](https://github.com/eightyeight)
 * [cuid for Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
+* [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
 
 
 # Short URLs

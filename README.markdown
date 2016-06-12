@@ -136,7 +136,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Haskell](https://github.com/eightyeight/hscuid) - [Daniel Buckmaster](https://github.com/eightyeight)
 * [cuid for Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
 * [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
-* [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktani](https://github.com/marktani)
+* [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
 
 
 # Short URLs

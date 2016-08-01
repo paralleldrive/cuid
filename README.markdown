@@ -141,7 +141,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 # Short URLs
 
-Need a smaller ID? `cuid.slug()` is for you. With fewer than 10 characters, `.slug()` is a great solution for short urls. They're good for things like URL slug disambiguation (i.e., `example.com/some-post-title-<slug>`) but **absolutely not recommended for database unique IDs**. Stick to the full cuid for database keys.
+Need a smaller ID? `cuid.slug()` is for you. With fewer than 10 characters, `.slug()` is a great solution for short urls. Slugs may be 7 or more characters and grow as the internal counter increases. They're good for things like URL slug disambiguation (i.e., `example.com/some-post-title-<slug>`) but **absolutely not recommended for database unique IDs**. Stick to the full cuid for database keys.
 
 Be aware, slugs:
 

@@ -26,6 +26,7 @@
     "babel-loader": "5.3.0",
     "babelify": "^6.2.0",
     "browserify": "^11.0.1",
+    "core-js": "^1.1.1",
     "ecstatic": "^0.8.0",
     "eslint": "0.24.0",
     "faucet": "0.0.1",
@@ -57,7 +58,6 @@
   },
   "dependencies": {
     "browser-fingerprint": "0.0.1",
-    "core-js": "^1.1.1",
     "node-fingerprint": "^1.1.0"
   }
 }

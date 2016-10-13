@@ -1,7 +1,7 @@
 /**
  * cuid.js
  * Collision-resistant UID generator for browsers and node.
- * Sequential for fast db lookups and recency sorting.
+ * Monotonically increasing for fast db lookups and recency sorting.
  * Safe for element IDs and server-side lookups.
  *
  * Extracted from CLCTR
@@ -30,7 +30,7 @@ const createCuid = (fingerprint) => {
   const cuid = () => {
     // Starting with a lowercase letter makes
     // it HTML element ID friendly.
-    const letter = 'c'; // hard-coded allows for sequential access
+    const letter = 'c';
 
     // timestamp
     // warning: this exposes the exact date and time

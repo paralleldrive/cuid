@@ -5,12 +5,12 @@
  * Safe for element IDs and server-side lookups.
  *
  * Extracted from CLCTR
- * 
+ *
  * Copyright (c) Eric Elliott 2012
  * MIT License
  */
 
-/*global window, navigator, document, require, process, module */
+/*global self, window, navigator, module, process, require */
 (function (app) {
   'use strict';
   var namespace = 'cuid',
@@ -71,6 +71,6 @@
 
       counter = safeCounter().toString(36).slice(-4);
 
-    return date.slice(-2) + 
+    return date.slice(-2) +
       counter + print + random;
   };

@@ -27,9 +27,14 @@
   },
   "devDependencies": {
     "applitude": "~0.x.x",
-    "grunt": "~0.3.x"
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-qunit": "^1.2.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt testall",
+    "build": "grunt install"
   }
 }

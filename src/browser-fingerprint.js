@@ -2,9 +2,10 @@
     // We want to cache the results of this
     var cache = (function calc() {
         var i,
-          count = 0;
+          count = 0,
+          env = typeof window === 'object' ? window : self;
 
-        for (i in window) {
+        for (i in env) {
           count++;
         }
 
@@ -16,7 +17,8 @@
   };
 
   api.fingerprint = function browserPrint() {
-    return pad((navigator.mimeTypes.length +
+    var mimeTypesLength = navigator.mimeTypes ? navigator.mimeTypes.length : 0;
+    return pad((mimeTypesLength +
       navigator.userAgent.length).toString(36) +
       api.globalCount().toString(36), 4);
   };

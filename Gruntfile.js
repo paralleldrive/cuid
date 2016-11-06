@@ -3,10 +3,8 @@ module.exports = function(grunt) {
   'use strict';
   grunt.initConfig({
     pkg: '<json:package.json>',
-    lint: {
-      all: ['./grunt.js', './dist/*.js', './test/test.js']
-    },
     jshint: {
+      all: ['./grunt.js', './dist/*.js', './test/test.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -42,11 +40,15 @@ module.exports = function(grunt) {
       applitude: ['test/applitude-cuid-test.html'],
       browser: ['test/browser-cuid-test.html']
     },
-    test: {
+    nodeunit: {
       "node-cuid": ['test/node-cuid-test.js']
     }
   });
-  grunt.registerTask('testall', 'qunit test');
-  grunt.registerTask('default', 'concat lint');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.registerTask('testall', ['qunit', 'nodeunit']);
+  grunt.registerTask('default', ['concat', 'jshint']);
   grunt.registerTask('install', 'concat');
 };

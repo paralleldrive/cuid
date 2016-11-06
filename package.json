@@ -8,23 +8,19 @@
     "url": "http://ericleads.com"
   },
   "main": "./dist/node-cuid.js",
-  "browserify": "./dist/browser-cuid.js",
+  "browser": "./dist/browser-cuid.js",
   "keywords": [
+    "id",
+    "guid",
     "uid",
     "unique id",
-    "guid",
     "uuid"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dilvie/cuid.git"
+    "url": "https://github.com/ericelliott/cuid.git"
   },
-  "directories": {
-    "dist": "./dist",
-    "lib": "./lib",
-    "src": "./src",
-    "test": "./test"
-  },
+  "license": "MIT",
   "devDependencies": {
     "applitude": "~0.x.x",
     "grunt": "^1.0.1",

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: '<json:package.json>',
     jshint: {
-      all: ['./grunt.js', './dist/*.js', './test/test.js'],
+      all: ['./Gruntfile.js', './dist/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.registerTask('testall', ['qunit', 'nodeunit']);
+  grunt.registerTask('test', ['concat', 'jshint', 'qunit', 'nodeunit']);
   grunt.registerTask('default', ['concat', 'jshint']);
-  grunt.registerTask('install', 'concat');
+  grunt.registerTask('build', 'concat');
 };

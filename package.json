@@ -30,7 +30,7 @@
     "grunt-contrib-qunit": "^1.2.0"
   },
   "scripts": {
-    "test": "grunt testall",
-    "build": "grunt install"
+    "test": "grunt test",
+    "build": "grunt build"
   }
 }

@@ -5,17 +5,11 @@
 To run unit tests on Saucelabs, first create a Saucelabs account (if you don't
 already have one) [here](https://saucelabs.com/opensource).
 
-Copy the `bin/env.sh.example` to `bin/env.sh`
-
-```sh
-cp bin/env.sh{.example,}
-```
-
-Edit your copy of `bin/env.sh` to enter your Saucelabs username and access key.
+Create a `.zuulrc` file in the root of this project:
 
 ```
-export SAUCE_USERNAME=username
-export SAUCE_ACCESS_KEY=key
+sauce_username: my_awesome_username
+sauce_key: 550e8400-e29b-41d4-a716-446655440000
 ```
 
 ## Testing

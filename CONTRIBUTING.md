@@ -14,14 +14,14 @@ sauce_key: 550e8400-e29b-41d4-a716-446655440000
 
 ## Testing
 
-To unit test the server implementation, run
+To unit test the server version locally, run
 
 ```sh
 npm run test:server
 ```
 
-To unit test the client implementation, run
+To unit test the browser version on Saucelabs, run
 
 ```sh
-npm run test:client
+npm run test:browser
 ```

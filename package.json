@@ -34,6 +34,7 @@
     "mkdirp": "^0.5.1",
     "tape": "^4.6.2",
     "uglify-js": "^2.7.4",
+    "webworkify": "^1.4.0",
     "zuul": "^3.11.1"
   },
   "scripts": {

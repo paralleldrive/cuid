@@ -135,7 +135,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
 * [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
 * [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
-* [cuid for Haskell](https://github.com/eightyeight/hscuid) - [Daniel Buckmaster](https://github.com/eightyeight)
+* [cuid for Haskell](https://github.com/crabmusket/hscuid) - [Daniel Buckmaster](https://github.com/crabmusket)
 * [cuid for Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
 * [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
 * [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
@@ -143,7 +143,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 # Short URLs
 
-Need a smaller ID? `cuid.slug()` is for you. With fewer than 10 characters, `.slug()` is a great solution for short urls. Slugs may be 7 or more characters and grow as the internal counter increases. They're good for things like URL slug disambiguation (i.e., `example.com/some-post-title-<slug>`) but **absolutely not recommended for database unique IDs**. Stick to the full cuid for database keys.
+Need a smaller ID? `cuid.slug()` is for you. With 7 to 10 characters, `.slug()` is a great solution for short urls. Slugs may grow up to 10 characters as the internal counter increases. They're good for things like URL slug disambiguation (i.e., `example.com/some-post-title-<slug>`) but **absolutely not recommended for database unique IDs**. Stick to the full cuid for database keys.
 
 Be aware, slugs:
 

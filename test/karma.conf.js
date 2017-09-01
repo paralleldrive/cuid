@@ -48,16 +48,18 @@ module.exports = function (config) {
       transform: [],
       extensions: ['.js']
     },
-    customLaunchers: customLaunchers,
     exclude: ['./test/karma.conf.js', './test/browser/**/*'],
     reporters: ['progress'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_WARN,
     autoWatch: false,
-    // browsers: ['Chrome'],
+    customLaunchers: customLaunchers,
     browsers: Object.keys(customLaunchers), // can also test with the browser locally by using ['Chrome']
     singleRun: true,
-    concurrency: 2
+    concurrency: 2,
+    retryLimit: 2,
+    captureTimeout: 120 * 1000,
+    browserNoActivityTimeout: 120 * 1000
   });
 };

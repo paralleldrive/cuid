@@ -24,6 +24,8 @@ module.exports = function (config) {
     browsers: [ 'ChromeHeadless' ],
     singleRun: true,
     concurrency: 2,
-    retryLimit: 2
+    retryLimit: 2,
+    captureTimeout: 120 * 1000,
+    browserNoActivityTimeout: 120 * 1000
   });
 };

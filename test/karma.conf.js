@@ -1,8 +1,4 @@
 // Karma configuration
-// Generated on Tue Aug 29 2017 21:03:43 GMT-0400 (EDT)
-
-// export SAUCE_USERNAME='MarkHerhold'
-// export SAUCE_ACCESS_KEY='228e2ef0-7319-45a1-b015-2623dc23085e'
 
 module.exports = function (config) {
 

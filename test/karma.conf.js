@@ -1,12 +1,5 @@
 // Karma configuration
 
-// puppeteer will download Chrome headless at install time
-var ChromiumRevision = require('puppeteer/package.json').puppeteer.chromium_revision;
-var Downloader = require('puppeteer/utils/ChromiumDownloader');
-var revisionInfo = Downloader.revisionInfo(Downloader.currentPlatform(), ChromiumRevision);
-
-process.env.CHROME_BIN = revisionInfo.executablePath;
-
 module.exports = function (config) {
   config.set({
     basePath: './..',

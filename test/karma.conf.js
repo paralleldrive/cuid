@@ -25,7 +25,7 @@ module.exports = function (config) {
     singleRun: true,
     concurrency: 2,
     retryLimit: 2,
-    captureTimeout: 120 * 1000,
-    browserNoActivityTimeout: 120 * 1000
+    captureTimeout: 5 * 60 * 1000,
+    browserNoActivityTimeout: 5 * 60 * 1000
   });
 };

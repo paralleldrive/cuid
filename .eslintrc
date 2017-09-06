@@ -1,37 +1,8 @@
 {
-  "parser": "babel-eslint",
-
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true
+    "node": true
   },
-
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": false,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "regexUFlag": true,
-    "regexYFlag": true,
-    "spread": true,
-    "superInFunctions": false,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": true,
-    "globalReturn": true,
-    "jsx": true
-  },
-
   "rules": {
     "block-scoped-var": [0],
     "brace-style": [2, "1tbs", {"allowSingleLine": true}],
@@ -81,7 +52,7 @@
     "no-else-return": [0],
     "no-empty": [2],
     "no-empty-character-class": [2],
-    "no-empty-label": [2],
+    "no-labels": [2],
     "no-eq-null": [0],
     "no-eval": [2],
     "no-ex-assign": [2],
@@ -99,7 +70,6 @@
     "no-irregular-whitespace": [2],
     "no-iterator": [2],
     "no-label-var": [2],
-    "no-labels": [2],
     "no-lone-blocks": [2],
     "no-lonely-if": [2],
     "no-loop-func": [2],
@@ -162,7 +132,7 @@
     "semi": [2],
     "semi-spacing": [2, {"before": false, "after": true}],
     "sort-vars": [0],
-    "space-after-keywords": [2, "always"],
+    "keyword-spacing": [2, {"after": true}],
     "space-before-function-paren": [2, {"anonymous": "always", "named": "always"}],
     "space-before-blocks": [0, "always"],
     "space-in-brackets": [
@@ -177,7 +147,6 @@
     ],
     "space-in-parens": [2, "never"],
     "space-infix-ops": [2],
-    "space-return-throw-case": [2],
     "space-unary-ops": [2, {"words": true, "nonwords": false}],
     "spaced-line-comment": [0, "always"],
     "strict": [2, "never"],

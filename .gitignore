@@ -1,4 +1,4 @@
 node_modules
-bin/env.sh
+dist
 npm-debug.log
-test-cuid.js
+.zuulrc

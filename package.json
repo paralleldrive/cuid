@@ -38,6 +38,7 @@
     "mkdirp": "^0.5.1",
     "tape": "^4.6.2",
     "uglify-js": "^2.7.4",
+    "watchify": "3.9.0",
     "webworkify": "^1.4.0"
   },
   "scripts": {

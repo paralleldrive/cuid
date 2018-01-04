@@ -13,9 +13,6 @@
   "react-native": {
     "./lib/fingerprint.js": "./lib/fingerprint.react-native.js"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "id",
     "guid",

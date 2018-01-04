@@ -1,0 +1,8 @@
+title: Cuid
+description: Collision-resistant ids optimized for horizontal scaling and performance.
+google_analytics: UA-36908968-1
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions

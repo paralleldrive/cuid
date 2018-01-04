@@ -1,5 +1,5 @@
 # cuid
-[![Travis-CI](https://travis-ci.org/ericelliott/cuid.svg)](https://travis-ci.org/ericelliott/cuid)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/learn-javascript-courses/javascript-questions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Travis-CI](https://travis-ci.org/ericelliott/cuid.svg)](https://travis-ci.org/ericelliott/cuid)
 
 Collision-resistant ids optimized for horizontal scaling and binary search lookup performance.
 

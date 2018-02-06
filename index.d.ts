@@ -1,3 +1,5 @@
-declare function cuid(): string;
+declare const cuid: (() => string) & {
+  slug: (() => string)
+};
 
-export = cuid
+export = cuid;

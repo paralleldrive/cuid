@@ -65,6 +65,19 @@ cuid.slug = function slug () {
     counter + print + random;
 };
 
+cuid.isCuid = function isCuid (stringToCheck) {
+  if (!stringToCheck) return false;
+  if (stringToCheck.startsWith('c') && stringToCheck.length === 25) return true;
+  return false;
+};
+
+cuid.isSlug = function isSlug (stringToCheck) {
+  if (!stringToCheck) return false;
+  var stringLength = stringToCheck.length;
+  if (stringLength >= 7 && stringLength <= 10) return true;
+  return false;
+};
+
 cuid.fingerprint = fingerprint;
 
 module.exports = cuid;

@@ -10,11 +10,11 @@ declare const cuid: (() => string) & {
   /**
    * Check if string is a valid 'cuid'.
    */
-  isCuid: (() => boolean)
+  isCuid: ((string) => boolean)
   /**
    * Check if string is a valid 'cuid' slug.
    */
-  isSlug: (() => boolean)
+  isSlug: ((string) => boolean)
 };
 
 export = cuid;

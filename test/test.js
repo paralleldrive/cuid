@@ -53,6 +53,8 @@ test('cuid.isCuid()', function (t) {
   t.ok(cuid.isCuid(null) === false, 'cuid.isCuid() should return false for null.');
   t.ok(cuid.isCuid(undefined) === false, 'cuid.isCuid() should return false for undefined.');
   t.ok(cuid.isCuid('abcdefghijklmnopqrstuvwxy') === false, 'cuid.isCuid() should return false for a random string.');
+  t.ok(cuid.isCuid(1) === false, 'cuid.isCuid() should return false for numbers.');
+  t.ok(cuid.isCuid(NaN) === false, 'cuid.isCuid() should return false for NaN.');
   t.end();
 });
 
@@ -61,6 +63,8 @@ test('cuid.isSlug()', function (t) {
   t.ok(cuid.isSlug(slug) === true, 'cuid.isSlug() should return true for a valid cuid slug.');
   t.ok(cuid.isSlug(null) === false, 'cuid.isSlug() should return false for null.');
   t.ok(cuid.isSlug(undefined) === false, 'cuid.isSlug() should return false for undefined.');
+  t.ok(cuid.isSlug(1) === false, 'cuid.isSlug() should return false for numbers.');
+  t.ok(cuid.isSlug(NaN) === false, 'cuid.isSlug() should return false for NaN.');
   t.end();
 });
 

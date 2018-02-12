@@ -6,13 +6,6 @@
     "name": "Eric Elliott",
     "url": "https://ericelliottjs.com"
   },
-  "contributors": [
-    {
-      "name": "GP",
-      "email": "me@httgp.com",
-      "url": "https://httgp.com/"
-    }
-  ],
   "main": "index.js",
   "browser": {
     "./lib/fingerprint.js": "./lib/fingerprint.browser.js"

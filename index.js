@@ -66,14 +66,12 @@ cuid.slug = function slug () {
 };
 
 cuid.isCuid = function isCuid (stringToCheck) {
-  if (!stringToCheck) return false;
   if (typeof stringToCheck !== 'string') return false;
   if (stringToCheck.startsWith('c') && stringToCheck.length === 25) return true;
   return false;
 };
 
 cuid.isSlug = function isSlug (stringToCheck) {
-  if (!stringToCheck) return false;
   if (typeof stringToCheck !== 'string') return false;
   var stringLength = stringToCheck.length;
   if (stringLength >= 7 && stringLength <= 10) return true;

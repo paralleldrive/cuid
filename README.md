@@ -177,7 +177,7 @@ Almost all web-technology identifiers allow numbers and letters (though some req
 The cuid specification should not be considered an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.
 
 
-### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)
+### [Submit a Question or Comment](https://github.com/ericelliott/cuid/issues/new?title=Question)
 
 
 ### Credit

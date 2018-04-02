@@ -139,6 +139,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
 * [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
 * [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
+* [cuid for Lua](https://github.com/marcoonroad/cuid) - [Marco Aurélio](https://github.com/marcoonroad)
 
 
 # Short URLs
@@ -177,7 +178,7 @@ Almost all web-technology identifiers allow numbers and letters (though some req
 The cuid specification should not be considered an API contract. Code that relies on the groupings as laid out here should be considered brittle and not be used in production.
 
 
-### [Submit a Question or Comment](https://github.com/dilvie/cuid/issues/new?title=Question)
+### [Submit a Question or Comment](https://github.com/ericelliott/cuid/issues/new?title=Question)
 
 
 ### Credit

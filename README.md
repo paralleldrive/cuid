@@ -140,6 +140,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
 * [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
 * [cuid for Lua](https://github.com/marcoonroad/cuid) - [Marco Aurélio](https://github.com/marcoonroad)
+* [cuid for Perl](https://github.com/zakame/Data-Cuid) - [Zak B. Elep](https://github.com/zakame)
 
 
 # Short URLs

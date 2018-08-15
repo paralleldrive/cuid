@@ -141,7 +141,10 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
 * [cuid for Lua](https://github.com/marcoonroad/cuid) - [Marco Aurélio](https://github.com/marcoonroad)
 * [cuid for Perl](https://github.com/zakame/Data-Cuid) - [Zak B. Elep](https://github.com/zakame)
+* [cuid for Perl 6](https://github.com/marcoonroad/perl6-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
+* [cuid for OCaml](https://github.com/marcoonroad/ocaml-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
 * [cuid for Swift](https://github.com/raphaelmansuy/cuid) - [Raphael Mansuy](https://github.com/raphaelmansuy)
+
 
 
 # Short URLs

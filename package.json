@@ -26,17 +26,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "14.4.0",
-    "eslint": "^3.9.1",
-    "karma": "^1.7.0",
-    "karma-browserify": "^5.1.1",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-tap": "^3.1.1",
-    "mkdirp": "^0.5.1",
-    "tape": "^4.6.2",
-    "uglify-js": "^2.7.4",
-    "watchify": "3.9.0",
-    "webworkify": "^1.4.0"
+    "browserify": "16.2.2",
+    "eslint": "3.19.0",
+    "karma": "2.0.5",
+    "karma-browserify": "5.3.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-tap": "4.1.4",
+    "mkdirp": "0.5.1",
+    "tape": "4.9.1",
+    "uglify-js": "3.4.7",
+    "updtr": "2.0.0",
+    "watchify": "3.11.0",
+    "webworkify": "1.5.0"
   },
   "scripts": {
     "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
@@ -44,6 +45,7 @@
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "karma start test/karma.conf.js",
     "test:server": "tape test/**/*.js",
-    "prepublish": "npm run build"
+    "prepare": "npm run build",
+    "update": "updtr"
   }
 }

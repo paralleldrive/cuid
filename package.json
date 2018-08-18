@@ -28,23 +28,19 @@
   "devDependencies": {
     "browserify": "16.2.2",
     "eslint": "3.19.0",
-    "karma": "2.0.5",
-    "karma-browserify": "5.3.0",
-    "karma-chrome-launcher": "2.2.0",
-    "karma-tap": "4.1.4",
     "mkdirp": "0.5.1",
     "tape": "4.9.1",
+    "testcafe": "^0.21.1",
     "uglify-js": "3.4.7",
     "updtr": "2.0.0",
-    "watchify": "3.11.0",
-    "webworkify": "1.5.0"
+    "watchify": "3.11.0"
   },
   "scripts": {
     "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
     "lint": "eslint index.js lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
-    "test:browser": "karma start test/karma.conf.js",
-    "test:server": "tape test/**/*.js",
+    "test:browser": "testcafe chrome ./test/browser.js",
+    "test:server": "tape test/server.js",
     "prepare": "npm run build",
     "update": "updtr"
   }

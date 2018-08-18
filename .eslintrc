@@ -1,8 +1,10 @@
 {
   "env": {
+    "es6": true,
     "browser": true,
     "node": true
   },
+  "parserOptions": { "ecmaVersion": 2017 },
   "rules": {
     "block-scoped-var": [0],
     "brace-style": [2, "1tbs", {"allowSingleLine": true}],

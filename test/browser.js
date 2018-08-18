@@ -17,7 +17,6 @@ const cafeToTapeFormat = (describe, ...rest) => {
     const end = async () => {}
     return fn({ ok, end })
   });
-  
-}
+};
 
 cuidTests.run(cafeToTapeFormat, { isInBrowser: true })

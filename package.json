@@ -30,7 +30,7 @@
     "eslint": "3.19.0",
     "mkdirp": "0.5.1",
     "tape": "4.9.1",
-    "testcafe": "^0.21.1",
+    "testcafe": "0.21.1",
     "uglify-js": "3.4.7",
     "updtr": "2.0.0",
     "watchify": "3.11.0"

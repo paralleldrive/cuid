@@ -48,7 +48,7 @@ function run (test, options) {
 
   test('cuid.isCuid()', function (t) {
     var id = cuid();
-    t.ok(cuid.isCuid(id) === false, 'cuid.isCuid() should return true for a valid cuid.');
+    t.ok(cuid.isCuid(id) === true, 'cuid.isCuid() should return true for a valid cuid.');
     t.ok(cuid.isCuid(null) === false, 'cuid.isCuid() should return false for null.');
     t.ok(cuid.isCuid(undefined) === false, 'cuid.isCuid() should return false for undefined.');
     t.ok(cuid.isCuid('abcdefghijklmnopqrstuvwxy') === false, 'cuid.isCuid() should return false for a random string.');

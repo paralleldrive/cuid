@@ -1,6 +1,6 @@
 {
   "name": "cuid",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
   "author": {
     "name": "Eric Elliott",

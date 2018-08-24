@@ -26,8 +26,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "browserify": "16.2.2",
     "eslint": "3.19.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "mkdirp": "0.5.1",
     "tape": "4.9.1",
     "testcafe": "0.21.1",
@@ -40,8 +44,9 @@
     "lint": "eslint index.js lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "testcafe chrome ./test/browser.js",
-    "test:server": "tape test/server.js",
+    "test:server": "tape -r babel-register -r babel-polyfill test/server.js",
     "prepare": "npm run build",
     "update": "updtr"
-  }
+  },
+  "dependencies": {}
 }

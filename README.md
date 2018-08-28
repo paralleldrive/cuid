@@ -9,14 +9,25 @@ Currently available for Node, browsers, Ruby, .Net, Go, PHP and Elixir (see port
 
 ## Example
 
-Node style. For the browser, either bundle with something like [browserify](https://github.com/substack/node-browserify) or [webpack](http://webpack.github.io/), or use the stand-alone version and leave off the require line.
+ESM:
+
+```js
+import cuid from 'cuid';
+
+console.log( cuid() );
+
+// cjld2cjxh0000qzrmn831i7rn
+```
+
+Node style:
 
 ```js
 var cuid = require('cuid');
 console.log( cuid() );
 
-// ch72gsb320000udocl363eofy
+// cjld2cyuq0000t3rmniod1foy
 ```
+
 
 ## Installing
 

@@ -35,8 +35,6 @@ console.log( cuid() );
 $ npm install --save cuid
 ```
 
-or download the stand-alone version from [`./dist`](https://github.com/ericelliott/cuid/tree/master/dist).
-
 
 ### Broken down
 

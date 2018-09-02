@@ -8,10 +8,12 @@
   },
   "main": "index.js",
   "browser": {
-    "./lib/fingerprint.js": "./lib/fingerprint.browser.js"
+    "./lib/fingerprint.js": "./lib/fingerprint.browser.js",
+    "./lib/getRandomValue.js": "./lib/getRandomValue.browser.js"
   },
   "react-native": {
-    "./lib/fingerprint.js": "./lib/fingerprint.react-native.js"
+    "./lib/fingerprint.js": "./lib/fingerprint.react-native.js",
+    "./lib/getRandomValue.js": "./lib/getRandomValue.react-native.js"
   },
   "keywords": [
     "id",

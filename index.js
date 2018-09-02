@@ -12,6 +12,7 @@
 
 var fingerprint = require('./lib/fingerprint.js');
 var pad = require('./lib/pad.js');
+var getRandomValue = require('./lib/getRandomValue.js');
 
 var c = 0,
   blockSize = 4,
@@ -19,7 +20,7 @@ var c = 0,
   discreteValues = Math.pow(base, blockSize);
 
 function randomBlock () {
-  return pad((Math.random() *
+  return pad((getRandomValue() *
     discreteValues << 0)
     .toString(base), blockSize);
 }

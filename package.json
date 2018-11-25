@@ -15,6 +15,11 @@
     "./lib/fingerprint.js": "./lib/fingerprint.react-native.js",
     "./lib/getRandomValue.js": "./lib/getRandomValue.react-native.js"
   },
+  "files": [
+    "lib/",
+    "index.js",
+    "index.d.ts"
+  ],
   "keywords": [
     "id",
     "guid",

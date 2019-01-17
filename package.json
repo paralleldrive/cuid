@@ -1,32 +1,16 @@
 {
   "name": "cuid",
-  "version": "2.1.4",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
+  "version": "2.1.4",
   "author": {
     "name": "Eric Elliott",
     "url": "https://ericelliottjs.com"
   },
-  "main": "index.js",
   "browser": {
     "./lib/fingerprint.js": "./lib/fingerprint.browser.js",
     "./lib/getRandomValue.js": "./lib/getRandomValue.browser.js"
   },
-  "react-native": {
-    "./lib/fingerprint.js": "./lib/fingerprint.react-native.js",
-    "./lib/getRandomValue.js": "./lib/getRandomValue.react-native.js"
-  },
-  "keywords": [
-    "id",
-    "guid",
-    "uid",
-    "unique id",
-    "uuid"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ericelliott/cuid.git"
-  },
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
@@ -41,14 +25,37 @@
     "updtr": "2.0.0",
     "watchify": "3.11.0"
   },
+  "files": [
+    "lib",
+    "dist",
+    "index.js"
+  ],
+  "jsdelivr": "dist/cuid.min.js",
+  "keywords": [
+    "guid",
+    "id",
+    "uid",
+    "unique id",
+    "uuid"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "react-native": {
+    "./lib/fingerprint.js": "./lib/fingerprint.react-native.js",
+    "./lib/getRandomValue.js": "./lib/getRandomValue.react-native.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericelliott/cuid.git"
+  },
   "scripts": {
     "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
     "lint": "eslint index.js lib test",
+    "prepare": "npm run build",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "testcafe chrome ./test/browser.js",
     "test:server": "tape -r babel-register -r babel-polyfill test/server.js",
-    "prepare": "npm run build",
     "update": "updtr"
   },
-  "dependencies": {}
+  "unpkg": "dist/cuid.min.js"
 }

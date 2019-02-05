@@ -153,6 +153,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Perl 6](https://github.com/marcoonroad/perl6-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
 * [cuid for OCaml](https://github.com/marcoonroad/ocaml-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
 * [cuid for Swift](https://github.com/raphaelmansuy/cuid) - [Raphael Mansuy](https://github.com/raphaelmansuy)
+* [cuid for Rust](https://github.com/mplanchard/cuid-rust) - [Matthew Planchard](https://github.com/mplanchard)
 
 
 

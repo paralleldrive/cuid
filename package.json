@@ -1,7 +1,7 @@
 {
   "name": "cuid",
   "description": "Collision-resistant ids optimized for horizontal scaling and performance. For node and browsers.",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "author": {
     "name": "Eric Elliott",
     "url": "https://ericelliottjs.com"
@@ -28,7 +28,8 @@
   "files": [
     "lib",
     "dist",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "jsdelivr": "dist/cuid.min.js",
   "keywords": [

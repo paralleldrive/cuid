@@ -128,7 +128,7 @@
     "no-void": [0],
     "no-warning-comments": [0, {"terms": ["todo", "fixme", "xxx"], "location": "start"}],
     "no-with": [2],
-    "no-extra-parens": [2],
+    "no-extra-parens": [0],
     "one-var": [0],
     "operator-assignment": [0, "always"],
     "operator-linebreak": [2, "after"],

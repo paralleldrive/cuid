@@ -19,7 +19,7 @@
     "eslint": "5.13.0",
     "eslint-plugin-testcafe": "0.2.1",
     "mkdirp": "0.5.1",
-    "riteway": "^4.0.1",
+    "riteway": "4.0.1",
     "tape": "4.9.2",
     "testcafe": "1.0.0",
     "uglify-js": "3.4.9",

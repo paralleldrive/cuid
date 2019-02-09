@@ -5,7 +5,10 @@
     "node": true
   },
   "extends": "plugin:testcafe/recommended",
-  "parserOptions": { "ecmaVersion": 2017 },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
   "plugins": [
     "testcafe"
   ],

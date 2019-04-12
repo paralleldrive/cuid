@@ -21,7 +21,7 @@
     "mkdirp": "0.5.1",
     "riteway": "6.0.3",
     "tape": "4.10.1",
-    "testcafe": "1.0.0",
+    "testcafe": "1.1.2",
     "uglify-js": "3.4.9",
     "updtr": "3.1.0",
     "watchify": "3.11.0"

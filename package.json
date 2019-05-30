@@ -22,7 +22,7 @@
     "riteway": "6.0.3",
     "tape": "4.10.1",
     "testcafe": "1.1.4",
-    "uglify-js": "3.5.15",
+    "uglify-js": "3.6.0",
     "updtr": "3.1.0",
     "watchify": "3.11.1"
   },

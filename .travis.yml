@@ -2,9 +2,9 @@ dist: trusty
 sudo: required
 language: node_js
 node_js:
-  - "6"
   - "8"
-  - "9"
+  - "10"
+  - "12"
 
 addons:
   firefox: latest

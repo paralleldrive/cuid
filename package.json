@@ -57,7 +57,7 @@
     "prepare": "npm run build",
     "test": "npm run -s lint && npm run -s test:server && npm run -s test:random && npm run -s test:browser && npm run -s test:worker",
     "test:browser": "testcafe chrome ./test/browser.js",
-    "test:worker": "browserify test/worker/worker.js -s cuid -o test/worker/worker.bundled.js && http-server test/worker",
+    "test:worker": "browserify ./test/worker/worker.js -s cuid -o ./test/worker/worker.bundled.js && testcafe chrome ./test/worker.js --app \"http-server ./test/worker -s\"",
     "test:server": "tape -r babel-register -r babel-polyfill test/server.js",
     "test:random": "node -r babel-register -r babel-polyfill test/getRandomValue.test.js",
     "update": "updtr"

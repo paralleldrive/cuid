@@ -18,6 +18,7 @@
     "browserify": "16.5.0",
     "eslint": "5.16.0",
     "eslint-plugin-testcafe": "0.2.1",
+    "http-server": "^0.12.0",
     "mkdirp": "0.5.1",
     "riteway": "6.1.1",
     "tape": "4.11.0",
@@ -54,8 +55,9 @@
     "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
     "lint": "eslint index.js lib test",
     "prepare": "npm run build",
-    "test": "npm run -s lint && npm run -s test:server && npm run -s test:random && npm run -s test:browser",
+    "test": "npm run -s lint && npm run -s test:server && npm run -s test:random && npm run -s test:browser && npm run -s test:worker",
     "test:browser": "testcafe chrome ./test/browser.js",
+    "test:worker": "browserify test/worker/worker.js -s cuid -o test/worker/worker.bundled.js && http-server test/worker",
     "test:server": "tape -r babel-register -r babel-polyfill test/server.js",
     "test:random": "node -r babel-register -r babel-polyfill test/getRandomValue.test.js",
     "update": "updtr"

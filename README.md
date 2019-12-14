@@ -155,6 +155,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Swift](https://github.com/raphaelmansuy/cuid) - [Raphael Mansuy](https://github.com/raphaelmansuy)
 * [cuid for Insomnia](https://github.com/n8io/insomnia-plugin-cuid) - [Nate Clark](https://github.com/n8io)
 * [cuid for Rust](https://github.com/mplanchard/cuid-rust) - [Matthew Planchard](https://github.com/mplanchard)
+* [cuid for Racket](https://github.com/theodesp/cuid) - [Theo Despoudis](https://github.com/theodesp)
 
 
 

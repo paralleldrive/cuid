@@ -15,16 +15,16 @@
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-register": "6.26.0",
-    "browserify": "16.2.3",
-    "eslint": "5.13.0",
+    "browserify": "16.5.0",
+    "eslint": "5.16.0",
     "eslint-plugin-testcafe": "0.2.1",
     "mkdirp": "0.5.1",
-    "riteway": "6.0.0",
-    "tape": "4.10.0",
-    "testcafe": "1.0.0",
-    "uglify-js": "3.4.9",
+    "riteway": "6.1.1",
+    "tape": "4.11.0",
+    "testcafe": "1.1.4",
+    "uglify-js": "3.7.2",
     "updtr": "3.1.0",
-    "watchify": "3.11.0"
+    "watchify": "3.11.1"
   },
   "files": [
     "lib",

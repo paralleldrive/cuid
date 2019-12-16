@@ -15,3 +15,9 @@ To unit test cuid in the browser version locally, run
 ```sh
 npm run test:browser
 ```
+
+To unit test cuid within a web worker in the browser version locally, run
+
+```sh
+npm run test:worker
+```

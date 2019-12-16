@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worker Test Page</title>
+    <style>
+        .ok { color: lime; }
+        .error { color: red; }
+    </style>
+    <script>
+        if (window.Worker) {
+            var lineCounter = 0;
+
+            var worker = new Worker('./worker.bundled.js');
+
+            worker.onmessage = function (event) {
+                var line = document.createElement('div');
+                line.classList.add(event.data.error ? 'error' : 'ok');
+                line.textContent = ++lineCounter + '\t' + event.data.message;
+                document.body.appendChild(line)
+            };
+
+            worker.postMessage(null);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

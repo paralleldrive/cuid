@@ -2,3 +2,4 @@ node_modules
 dist
 npm-debug.log
 .zuulrc
+test/worker/worker.bundled.js

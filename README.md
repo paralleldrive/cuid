@@ -139,6 +139,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 ### Ports:
 
 * JavaScript (Browsers & Node)
+* [cuid CLI](https://github.com/GaiAma/cuid-cli) - [Can Rau](https://github.com/canrau)
 * [cuid for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
 * [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)

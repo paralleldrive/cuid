@@ -18,7 +18,7 @@
     "browserify": "16.5.0",
     "eslint": "5.16.0",
     "eslint-plugin-testcafe": "0.2.1",
-    "http-server": "^0.12.0",
+    "http-server": "0.12.0",
     "mkdirp": "0.5.1",
     "riteway": "6.1.1",
     "tape": "4.11.0",

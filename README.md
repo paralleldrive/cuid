@@ -136,28 +136,26 @@ The only part of a cuid that might be hard to replicate between different client
 
 The algorithm is also easy to reproduce in other languages. You are encouraged to port it to whatever language you see fit.
 
-### Ports:
+### Ports of CUID for:
 
-* JavaScript (Browsers & Node)
-* [cuid for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
-* [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
-* [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
-* [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
-* [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
-* [cuid for Haskell](https://github.com/crabmusket/hscuid) - [Daniel Buckmaster](https://github.com/crabmusket)
-* [cuid for Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
-* [cuid for Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
-* [cuid for Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
-* [cuid for Lua](https://github.com/marcoonroad/cuid) - [Marco Aurélio](https://github.com/marcoonroad)
-* [cuid for Perl](https://github.com/zakame/Data-Cuid) - [Zak B. Elep](https://github.com/zakame)
-* [cuid for Perl 6](https://github.com/marcoonroad/perl6-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
-* [cuid for OCaml](https://github.com/marcoonroad/ocaml-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
-* [cuid for Swift](https://github.com/raphaelmansuy/cuid) - [Raphael Mansuy](https://github.com/raphaelmansuy)
-* [cuid for Insomnia](https://github.com/n8io/insomnia-plugin-cuid) - [Nate Clark](https://github.com/n8io)
-* [cuid for Rust](https://github.com/mplanchard/cuid-rust) - [Matthew Planchard](https://github.com/mplanchard)
-* [cuid for Racket](https://github.com/theodesp/cuid) - [Theo Despoudis](https://github.com/theodesp)
-
-
+* [.Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
+* [Clojure](https://github.com/hden/cuid) - [Hao-kang Den](https://github.com/hden)
+* [Crystal](https://github.com/rodrigopinto/cuid) - [Rodrigo Pinto](https://github.com/rodrigopinto)
+* [Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)
+* [Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
+* [Haskell](https://github.com/crabmusket/hscuid) - [Daniel Buckmaster](https://github.com/crabmusket)
+* [Insomnia](https://github.com/n8io/insomnia-plugin-cuid) - [Nate Clark](https://github.com/n8io)
+* [Java](https://github.com/graphcool/cuid-java) - [Nilan Marktanner](https://github.com/marktani)
+* [Lua](https://github.com/marcoonroad/cuid) - [Marco Aurélio](https://github.com/marcoonroad)
+* [OCaml](https://github.com/marcoonroad/ocaml-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
+* [Perl](https://github.com/zakame/Data-Cuid) - [Zak B. Elep](https://github.com/zakame)
+* [Perl 6](https://github.com/marcoonroad/perl6-cuid) - [Marco Aurélio](https://github.com/marcoonroad)
+* [PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
+* [Python](https://github.com/necaris/cuid.py) - [Rami Chowdhury](https://github.com/necaris)
+* [Racket](https://github.com/theodesp/cuid) - [Theo Despoudis](https://github.com/theodesp)
+* [Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
+* [Rust](https://github.com/mplanchard/cuid-rust) - [Matthew Planchard](https://github.com/mplanchard)
+* [Swift](https://github.com/raphaelmansuy/cuid) - [Raphael Mansuy](https://github.com/raphaelmansuy)
 
 # Short URLs
 

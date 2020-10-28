@@ -3,7 +3,7 @@
 
 Collision-resistant ids optimized for horizontal scaling and binary search lookup performance.
 
-Currently available for Node, browsers, Ruby, .Net, Go, PHP, Elixir and [Crystal](https://github.com/crystal-lang/crystal) (see ports below — more ports are welcome).
+Currently available for Node, browsers, Java, Ruby, .Net, Go, and many other languages (see ports below — more ports are welcome).
 
 `cuid()` returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 

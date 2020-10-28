@@ -3,7 +3,7 @@
 
 Collision-resistant ids optimized for horizontal scaling and binary search lookup performance.
 
-Currently available for Node, browsers, Ruby, .Net, Go, PHP and Elixir (see ports below -- more ports are welcome).
+Currently available for Node, browsers, Java, Ruby, .Net, Go, and many other languages (see ports below — more ports are welcome).
 
 `cuid()` returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.
 
@@ -157,6 +157,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Rust](https://github.com/mplanchard/cuid-rust) - [Matthew Planchard](https://github.com/mplanchard)
 * [cuid for Racket](https://github.com/theodesp/cuid) - [Theo Despoudis](https://github.com/theodesp)
 * [cuid for Deno](https://github.com/grantcarthew/deno-cuid) - [Grant Carthew](https://github.com/grantcarthew)
+* [cuid for Crystal](https://github.com/rodrigopinto/cuid) - [Rodrigo Pinto](https://github.com/rodrigopinto)
 
 # Short URLs
 

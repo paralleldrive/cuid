@@ -158,6 +158,7 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 * [cuid for Racket](https://github.com/theodesp/cuid) - [Theo Despoudis](https://github.com/theodesp)
 * [cuid for Deno](https://github.com/grantcarthew/deno-cuid) - [Grant Carthew](https://github.com/grantcarthew)
 * [cuid for Crystal](https://github.com/rodrigopinto/cuid) - [Rodrigo Pinto](https://github.com/rodrigopinto)
+* [cuid for C](https://github.com/HugoDaniel/cuid-c) - [Hugo Daniel](https://github.com/HugoDaniel)
 
 # Short URLs
 

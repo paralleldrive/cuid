@@ -201,6 +201,4 @@ The cuid specification should not be considered an API contract. Code that relie
 
 ### Credit
 
-Created by Eric Elliott, Author, ["Programming JavaScript Applications (O'Reilly)"](https://ericelliottjs.com/product/programming-javascript-applications-ebook/)
-
-Thanks to [Tout](http://tout.com/) for support and production testing.
+Created by [Eric Elliott](https://ericelliottjs.com).

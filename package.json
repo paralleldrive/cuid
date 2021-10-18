@@ -19,7 +19,7 @@
     "eslint": "5.16.0",
     "eslint-plugin-testcafe": "0.2.1",
     "http-server": "0.12.1",
-    "mkdirp": "0.5.1",
+    "mkdirp": "1.0.4",
     "riteway": "6.1.1",
     "tape": "4.13.0",
     "testcafe": "1.1.4",

@@ -1,18 +1,17 @@
-dist: trusty
+dist: bionic
 sudo: required
 language: node_js
 node_js:
-  - "6"
-  - "8"
-  - "9"
+  - "14"
+  - "16"
+  - "18"
 
 addons:
   firefox: latest
+  chrome: stable
   apt:
-    sources:
-     - google-chrome
     packages:
-     - google-chrome-stable fluxbox
+     - fluxbox
 
 before_script:
   - "export DISPLAY=:99.0"

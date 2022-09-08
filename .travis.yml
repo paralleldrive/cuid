@@ -1,10 +1,8 @@
 language: node_js
-node_js: "stable"
-
-dist: bionic
-
-before_install:
-   - stty cols 80
+node_js:
+  - 'lts/*'
+install:
+  - npm install --legacy-peer-deps
 
 addons:
    firefox: latest

@@ -20,7 +20,7 @@
     "eslint-plugin-testcafe": "0.2.1",
     "http-server": "0.12.1",
     "mkdirp": "0.5.1",
-    "riteway": "6.1.1",
+    "riteway": "6.3.1",
     "tape": "4.13.0",
     "testcafe": "1.1.4",
     "uglify-js": "3.7.5",

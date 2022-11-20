@@ -24,7 +24,7 @@
     "tape": "4.13.0",
     "testcafe": "1.1.4",
     "uglify-js": "3.7.5",
-    "updtr": "3.1.0",
+    "updtr": "4.0.0",
     "watchify": "3.11.1"
   },
   "files": [

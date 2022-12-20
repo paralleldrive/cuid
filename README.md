@@ -140,7 +140,8 @@ The algorithm is also easy to reproduce in other languages. You are encouraged t
 
 * JavaScript (Browsers & Node)
 * [cuid for Ruby](https://github.com/iyshannon/cuid) - [Ian Shannon](https://github.com/iyshannon)
-* [cuid for .Net](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
+* [cuid for .NET Framework](https://github.com/moonpyk/ncuid ) - [Clément Bourgeois](https://github.com/moonpyk)
+* [cuid for .NET](https://github.com/xaevik/cuid.net) - [Alan Brault](https://github.com/xaevik)
 * [cuid for Go](http://github.com/lucsky/cuid) - [Luc Heinrich](https://github.com/lucsky)
 * [cuid for PHP](https://github.com/endyjasmi/cuid) - [Endy Jasmi](https://github.com/endyjasmi)
 * [cuid for Elixir](https://github.com/duailibe/cuid) - [Lucas Duailibe](https://github.com/duailibe)

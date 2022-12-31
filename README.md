@@ -7,6 +7,8 @@ Collision-resistant ids optimized for horizontal scaling and binary search looku
 
 > Note: All monotonically increasing (auto-increment), and timestamp-based ids share the security issues with Cuid. V4 UUIDs and GUIDs are also insecure because it's possible to predict future values of many random algorithms, and many of them are biased, leading to increased probability of collision.
 
+## Original Documentation Follows
+
 Currently available for Node, browsers, Java, Ruby, .Net, Go, and many other languages (see ports below — more ports are welcome).
 
 `cuid()` returns a short random string with some collision-busting measures. Safe to use as HTML element ID's, and unique server-side record lookups.

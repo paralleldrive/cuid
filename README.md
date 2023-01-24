@@ -5,7 +5,11 @@ Collision-resistant ids optimized for horizontal scaling and binary search looku
 
 ## Status: Deprecated due to security. Use [Cuid2](https://github.com/paralleldrive/cuid2), instead.
 
-> Note: All monotonically increasing (auto-increment, k-sortable), and timestamp-based ids share the security issues with Cuid. V4 UUIDs and GUIDs are also insecure because it's possible to predict future values of many random algorithms, and many of them are biased, leading to increased probability of collision. Likewise, UUID V6-V8 are also insecure because they leak information which could be used to exploit systems or violate user privacy.
+> Note: All monotonically increasing (auto-increment, k-sortable), and timestamp-based ids share the security issues with Cuid. V4 UUIDs and GUIDs are also insecure because it's possible to predict future values of many random algorithms, and many of them are biased, leading to increased probability of collision. Likewise, UUID V6-V8 are also insecure because they leak information which could be used to exploit systems or violate user privacy. Here are some example exploits:
+>
+> * [Unauthorized password reset via guessable ID](https://infosecwriteups.com/bugbounty-how-i-was-able-to-compromise-any-user-account-via-reset-password-functionality-a11bb5f863b3)
+> * [Unauthorized access to private GitLab issues via guessable ids](https://infosecwriteups.com/how-this-easy-vulnerability-resulted-in-a-20-000-bug-bounty-from-gitlab-d9dc9312c10a)
+> * [Unauthorized password reset via guid](https://www.intruder.io/research/in-guid-we-trust)
 
 ## Original Documentation Follows
 

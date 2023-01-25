@@ -1,27 +1,10 @@
-dist: trusty
-sudo: required
+dist: focal
 language: node_js
 node_js:
-  - "6"
-  - "8"
-  - "9"
+  - 'lts/*'
+install:
+  - npm install --legacy-peer-deps
 
 addons:
-  firefox: latest
-  apt:
-    sources:
-     - google-chrome
-    packages:
-     - google-chrome-stable fluxbox
-
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3
-  - fluxbox >/dev/null 2>&1 &
-
-env:
-  global:
-    - secure: ZaVxQhRv9HYXTCqeS9T4XXGO1cGayL11os8jDZ6wqNkQAwkOw3QSL70iloN5DMzg4WXv8Pwp5I4EUDIcUwiu4UCbDgfn1vYoTfVEmDMBDni4xw3CRG7IT8gEijJItCaOdEzC+IBmpAFuVI8xcuic7WBYPKRnShWkZ1xwmHDSenc=
-    - secure: lh7gaH4G4RUvdjrocupakeFbx4JtF7AyLGXGfsJl+/PJFjvrB+Ahatb8sTcb5hDHTr+Ucunzawx1HBNE+k+7CyykKBQpsQNWT/q6vlL/PAjRpt501O46NEdfTm/RSTqHgIo9WINYIa/ZpCh2L0vAevduaT0GGFCaP9W7fpJaVhM=
-    - CHROME_BIN=/usr/bin/google-chrome-stable
+   firefox: latest
+   chrome: stable

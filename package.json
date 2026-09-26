@@ -15,7 +15,7 @@
     "babel-preset-env": "1.7.0",
     "babel-register": "6.26.0",
     "browserify": "17.0.0",
-    "eslint": "8.32.0",
+    "eslint": "8.57.1",
     "eslint-plugin-testcafe": "0.2.1",
     "http-server": "14.1.1",
     "mkdirp": "2.1.3",
